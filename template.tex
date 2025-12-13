@@ -1,0 +1,287 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+
+% \documentclass[AutoFakeBold]{LZUThesis}
+\documentclass[AutoFakeBold]{LZUThesis-PgD&PhD}
+\usepackage{appendix}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{verbatim}
+\usepackage{eqnarray}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{slashed} 
+\usepackage{braket}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\ov}{\overline}
+\newcommand{\skk}[1]{\textbf{\textcolor{Orange}{#1}}}
+\newcommand{\ct}[1]{\cite{#1}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\GeV}{\mathrm{GeV}}
+\lstset{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    escapeinside={\%*}{*)},
+    extendedchars=false,
+    linewidth=\textwidth,
+    basewidth={0.5em, 0.5em}
+}
+\begin{document}
+%=====%
+%
+%封皮页填写内容
+%
+%=====%
+
+
+
+\schoolcode{10730}
+\secret{公开}
+\cid{O572}
+%\yjsType{博士}
+\yjsType{硕士}
+
+\yjsZsZy{\quad 学\quad 术\quad 学\quad 位\quad}
+% \yjsZsZy{\quad 专\quad 业\quad 学\quad 位\quad}
+
+
+% 标题样式 使用 \title{{}}; 使用时必须保证至少两个外侧括号
+%  如： 短标题 \title{{第一行}},
+% 	      长标题 \title{{第一行}{第二行}}
+%             超长标题\tiitle{{第一行}{...}{第N行}}
+\title{{粲介子半轻单举衰变的唯象学研究}}
+
+% 标题样式 使用 \entitle{{}}; 使用时必须保证至少两个外侧括号
+%  如： 短标题 \entitle{{First row}},
+% 	      长标题 \entitle{{First row}{ Second row}}
+%             超长标题\entitle{{First row}{...}{ Next N row}}
+% 注意：  英文标题多行时 需要在开头加个空格 防止摘要标题处英语单词粘连。
+\entitle{{Phenomenonological study on semi-leptonic}{inclusive decay of charm meson}}
+
+\author{邵康康}
+
+\major{物理学·粒子物理与原子核物理}
+% \major{专业学位类型·培养领域}
+
+\research{粒子物理理论}
+
+%\education{学历教育/同等学力人员申请博士学位}
+ \education{学历教育人员申请硕士学位}
+% \education{学历教育/同等学力人员申请硕士学位/在职攻读硕士专业学位（非学历）}
+
+\advisor{于福升 教授}
+\codvisor{} %合作导师，可为空，但不可没有这一栏
+\elapse{2022 年 9 月\quad 至 \quad 2025 年 3 月}
+\defense{2025 年 5 月}
+
+\maketitle
+
+%======%
+%诚信说明页
+%授权说明书
+%======%
+% 如果超出边界，可以调整签字的宽度，现在是50，如果你不用，把下面的注释就好
+
+% 你的签名
+\mysignature{
+    % \raisebox{-5pt}{
+    % \includegraphics[width=40pt]{signature.pdf}
+    % }
+}
+% 你手写的日期
+\mytime{
+    % \raisebox{-5pt}{
+    % \includegraphics[width=40pt]{signature.pdf}
+    % }
+}
+% 老师的手写签名
+\supervisorsignature{
+    % \raisebox{-5pt}{
+    % \includegraphics[width=40pt]{signature.pdf}
+    % }
+}
+% 老师手写的时间
+\teachertime{
+    % \raisebox{-5pSt}{
+    % \includegraphics[width=40pt]{signature.pdf}
+    % }
+}
+% 老师手写的成绩
+\recommendedgrade{
+    % \raisebox{-5pt}{
+    % \includegraphics[width=40pt]{signature.pdf}
+    % }
+}
+
+\makestatement
+
+
+\frontmatter
+
+
+
+%中文摘要
+\ZhAbstract{当前重味物理领域⾯临若⼲长期存在的挑战，并引起领域内的⼴泛关注。其中之⼀是粲强⼦寿命疑难：D介⼦寿命的理论预⾔与实验
+观测值并不⼀致，在某些参数值下$\mrm{D}^+$介⼦理论预⾔中⼼值甚⾄是负值，同时粲重⼦寿命的次序对⾼阶修正高度敏感。主要原因在于
+D介⼦的衰变宽度依赖⾮微扰强⼦矩阵元的输⼊，⽽⽬前理论⼯作中使⽤的⾮微扰强⼦矩阵元均具有较强的模型依赖性。因此从D介
+⼦半轻单举衰变数据中实现⾮微扰强⼦矩阵元模型⽆关的拟合抽取，将是理解甚⾄解决粲强⼦寿命疑难的关键。
+
+本文系统地进⾏了D介⼦的半轻单举衰变的唯象学分析，涵盖三种D介⼦半轻单举衰变。具体⽽⾔,
+\begin{itemize}
+    \item [一]理论上，本文基于重夸克有效理论和算符乘积展开，经过两重解析积分可得D介⼦半轻单举过程的电⼦能谱，对其进⾏加权积
+    分可得D介⼦半轻单举衰变道的衰变宽度和电⼦能量矩的理论公式，这些公式以粲夸克质量负幂次和强相互作⽤耦合常数进⾏双重展
+    开。对于粲夸克质量负幂次展开的幂次修正，本文推导的理论公式精确⾄量纲六算符⾮微扰矩阵元的贡献；对于强相互作⽤耦合常数
+    展开的微扰修正，本文精确⾄两圈图⽔平。此外末态夸克质量效应也被考虑在内。
+    \item[二]数据⽅⾯，本文从美国的CLEO合作组关于$\mrm{D}^0$ 与$\mrm{D}^+$介⼦半轻单举衰变过程的数据中抽取出衰变宽度和电⼦能量矩的实验值，从
+    我国的BESIIII合作组关于$\mrm{D_s^+}$半轻单举衰变过程的数据中抽取出衰变宽度和电⼦能量矩的实验值，这些值将与相应理论表达式⼀齐进⾏全
+    局拟合。
+    \item[三]唯象学分析，由于衰变宽度对粲夸克质量⾼度敏感，本文基于三种粲夸克质量⽅案进⾏全局拟合，此外在三种粲夸克质量⽅
+    案的基础上，⾼阶幂次修正的误差贡献也被包括在内。由于同位旋对称性的约束，本文不区分$\mrm{D}^0$和$\mrm{D}^{+}$介⼦的⾮微扰强⼦矩阵元。
+\end{itemize}
+在该⼯作中，本文取得了以下成果:
+\begin{itemize}
+    \item[一] ⾸次对粲强⼦半轻单举衰变过程中的量纲五算符⾮微扰强⼦矩阵元实现模型⽆关的⾼精度拟合抽取：该拟合结果可以直接⽤于粲强⼦
+    寿命的理论计算。
+    \item[二] 提出1S质量⽅案是⽬前计算粲强⼦寿命最佳的质量⽅案：本文在1S质量⽅案下给出粲强⼦半轻单举衰变宽度精确⾄三圈图微扰修正
+    的数值结果，展示出极好的收敛性。
+\end{itemize}
+
+本文选取1S质量方案下重夸克有效理论基本参数的全局拟合估计值作为最终推荐值,并给出关于D介子寿命的简单定性讨论。
+}{重夸克有效理论，算符乘积展开，粲介子半轻单举衰变}
+
+
+%英文摘要
+\EnAbstract{The field of heavy-flavor physics faces several long-standing challenges that have garnered widespread attention. One of the key issues is the charm hadron lifetime puzzle: theoretical predictions for the \( \mrm{D} \) meson lifetimes do not align with experimental results. Under certain conditions, the theoretical prediction for the \( \mathrm{D}^+ \) meson even yields a negative central value. Additionally, the hierarchy of charm hadron lifetimes is highly sensitive to higher-order corrections. This discrepancy arises from the dependence of \(\mrm{D} \) meson decay widths on non-perturbative strong interaction matrix elements, which are model-dependent in current theories. Therefore, obtaining model-independent extractions of these matrix elements from semi-leptonic \(\mrm{D} \) meson decay data is crucial to resolving this issue.
+
+In this study, a systematic phenomenological analysis of semi-leptonic inclusive decays of \( \mrm{D} \) mesons are conducted, covering three types of \( \mrm{D} \) meson semi-leptonic inclusive decays. Specifically, 
+
+Theoretically Aspect, this study is based on the heavy quark effective theory and operator product expansion. After performing analytic integration, we obtain the electron energy spectrum for the \( \mrm{D} \) meson semi-leptonic inclusive decay. By applying weighted integration, we derive theoretical formulas for the decay width and electron energy moments of \( \mrm{D} \) meson semi-leptonic inclusive decays. These formulas are expanded in terms of the negative power of the charm quark mass and the strong interaction coupling constant. For the power corrections in the charm quark mass expansion, the theoretical formulas derived in this study accurately account for contributions from dimension-six operator non-perturbative matrix elements. For the perturbative corrections in the expansion of the strong interaction coupling constant, we include up to two-loop diagrams. Additionally, the effects of final-state quark masses are also considered.
+
+Data Aspect, We extracted experimental values for the decay widths and electron energy moments from the CLEO collaboration's data on the semi-leptonic decays of \( \mathrm{D}^0 \) and \( \mathrm{D}^+ \) mesons in the United States. Additionally, we extracted experimental values for the decay widths and electron energy moments from the BESIII collaboration's data on the semi-leptonic decays of \( \mathrm{D_s^+} \) mesons in China. These values will be used for global fitting in conjunction with the corresponding theoretical expressions.
+
+Phenomenological Analysis Aspect, Since the strong sensitivity of the decay width to the charm quark mass, we perform a global fit based on three different charm quark mass schemes. Furthermore, the error contributions from higher-order power corrections are also included in these scenarios. Due to the constraints of isospin symmetry, we do not distinguish between the non-perturbative strong interaction matrix elements of \( \mathrm{D}^0 \) and \( \mathrm{D}^+ \) mesons.
+
+For the first time, a model-independent fit extraction of the dimension-five operator non-perturbative strong interaction matrix elements in the charm hadron semi-leptonic inclusive decay is achieved. The fitting results can be directly used for the theoretical calculation of charm hadron lifetimes. This study identifies the 1S mass scheme as the optimal choice for calculating charm hadron lifetimes. We present precise numerical results for the semi-leptonic decay width up to three-loop perturbative corrections under the 1S scheme, showing excellent convergence.
+
+This study selects the global fit estimates of the fundamental parameters in the heavy quark effective theory under the 1S mass scheme as the final recommended values and provides a simple qualitative discussion on \( \mrm{D} \) meson lifetimes.
+}{Heavy Quark Effective Theory, Operator Product Expandsion, Semi-leptonic Inculsive Charm Decay}
+
+%生成目录
+% \tableofcontents
+% 下面这个包含图表目录
+\customcontent
+
+% % 部分同学需要专业术语注释表，* 表示不加入目录
+% \chapter*{专业术语注释表}
+% \begin{longtable}{lll}
+%   \caption*{缩略词说明}\\
+%   SS & Spread Spectrum & 扩展频谱 \\
+%   PAPR & Peak to Average Power Ratio & 峰均比\\
+%   DCSK & Differential Chaos Shift Keying &差分混移位键控\\
+%   dasd & fdhfudw eqwrqw fasfasfs fewev wqfwefew &\tabincell{l}{太长了\\换行一下}\\
+% \end{longtable}
+
+%文章主体
+\mainmatter
+\input{introduction.tex}
+\input{Standard_Model.tex}
+\input{Theoretical_Study_on_Semi-leptonic_Decay.tex}
+\input{Data_Analysis_Phenomenonology.tex}
+\input{Summary.tex}
+
+\begin{appendix}
+    \input{appendix_A.tex}
+    %\input{appendix_B.tex}
+    %\input{appendix_C.tex}
+    %\input{appendix_D.tex}
+    %%\input{appendix_E.tex}
+    \end{appendix}
+
+\blank
+
+
+%论文后部
+\backmatter
+
+
+%=======%
+%引入参考文献文件
+%=======%
+\bibdatabase{bib/database}%bib文件名称 仅修改bib/ 后部分
+\printbib
+% \nocite{*} %显示数据库中有的，但是正文没有引用的文献
+
+
+
+\Achievements
+一、发表论文
+\begin{itemize}
+    \item[1]第一作者 Data determination of HQET parameters in inclusive charm decays[A]. 2025. arXiv: 2502.05901.
+    \item[2] 第四作者 Inclusive weak-annihilation decays and lifetimes of beauty-charmed baryons[J/OL]. Phys.Rev.D,2022,106(9):093013. DOI:10.1103/PhysRevD.106.093013
+\end{itemize}
+\blank
+
+二、参与课题
+
+粲味强子单举衰变的理论研究（12375086）
+
+\Thanks
+正如第五章所言，这个课题还有很多很多有意思的工作可以继续做下去，但适时停下来去回顾这一路上所经历的风景，往往可以和大家一起走的更远。
+
+感谢先行者们，是我的导师于福升教授、秦溱副教授和本文所引用的各项研究成果，读研究生以来的各位老师们，父母家人与肖叶蕾同学共同塑造了这篇论文，也塑造了现在的我。
+
+感谢后来者们，你们未来的每一次引用、借鉴和快速入门这个方向都是这篇学位论文的意义得以拓宽和生命得以延续的关键。
+
+衷心感谢我的导师于福升教授，不会忘记电动力学课程上的第一份作业（你的理想是什么，你为了理想原意付出什么样的努力$\cdots$）。从那时起，到这份学位论文的完稿，这一路上走的很慢但很踏实。于老师会根据每个人的性格特点来安排适合每个人的课题方向，他具有敏锐的物理直觉，在课题开始时候给我们一张完整但粗糙的蓝图并和我们一起去点亮地图上的每一个点。在课题的每个阶段坦诚地告诉我们将会遇到什么样的问题以及有哪些解决方案，并给出关键性的建议。很感谢于老师将我们送到中国科学院大学物理学院联合培养，使我们有机会接受研究生基础课程的顶尖水平培养，这使得在具体科研工作中会多一份自信。事实上自信比黄金还重要，这也是我们面对较高难度课题有充分思想准备的前提。\tb{「早熟的人，往往都晚熟」}，这一路上我犯了不少不大不小的错，每次犯错之后于老师总会耐心地从全局角度帮我分析利弊，理清矛盾，使得现在的我少了一丝戾气，多了一份专注自己的内力。在和老师的讨论与相处中，我深切感受到于老师不仅是研究工作中的良师，也是人生道路上的益友。大学四年级期间，于老师帮我联系去华中科技大学物理学院联合培养的机会使我能有机会在新的环境中学习和开拓视野，以及在后来帮我询问博士申请的相关事宜也付出了很多心血。感谢于老师在这些年对我的悉心培养以及付出的心血。
+
+同时，我还想向硕士研究生期间的课题合作者，华中科技大学的秦溱老师致以由衷的谢意。在华中科技大学物理学院两年半的联合培养时光，秦老师无论在生活还是科研上均无微不至的关心和照顾我，给我提供了很多帮助。仍然记得第一次去华科期间与秦老师讨论度规张量的夜晚，事实上，在具体的科研问题上，秦老师也会用启发式的方法引导我们主动地思考问题的答案，并在这个过程中培养我们独立思考的能力。\textbf{「想到和得到中间，还有一个做到」}。在实现属于我的科研蓝图过程里，充满了「找错」和「改错」的过程（比如两种运动学变量之间的之间的交叉检验等等），秦老师会在这个过程中介绍“二分法”，使得问题的范围不断缩小，并最终实现“改错”的目的。我在此后的科研工作中也不断的运用这个方法并和合作者一起找到这样那样的「错误」。\textbf{「无知并不可怕，可怕的是无知但不自知」},每次在科技楼北515和秦老师讨论课题，我会坦诚地讨论自己所不清楚的地方，事实上有很多非常幼稚的问题和想法，但秦老师每次总会耐心地引导我去得到正确的答案。去年十二月底开始，在兰州大学肖栋老师帮助下，我们在数据处理和唯象学分析方面不断取得突破性进展；此外在山东大学陈龙老师和北京大学马滟青老师的帮助下，我们的理论公式也囊括了两圈图水平的贡献。基于上述的进展，我们趁热打铁，秦老师和我一起工作至除夕夜的前一天并在正月初二继续工作至文章完成。很感谢秦老师在这段攻坚阶段里充分的支持和鼓励，这段并肩作战的经历在未来的记忆里将是我最珍贵的回忆之一（同时也为耽误秦老师的假期感到非常内疚）。
+
+
+衷心感谢一路上帮助过我的同门和朋友们，我深知仅凭一己之力无法走到现在，每当遇到拿捏不动的问题时总会去叨扰大家。
+
+感谢建鹏师兄在进组考核阶段给予我的帮助和支持，使得我可以快速上手相关的工作；感谢国贺师兄和李东浩师叔对本文工作所做的先驱性努力和尝试，此外在国贺师兄的手把手的帮助下我深度参与到$\Xi_{\mrm{bc}}\to X_{\mrm{cs}}$衰变道的计算并发表了职业生涯中第一篇参与的工作;感谢宋雯捷师姐在考研准备、雅思考试准备对我毫无保留地分享她的经验，此外，和雯捷师姐合作过程中，本文的工作的理论部分取得了很多突破性进展（量纲三算符的单圈修正与量纲五算符的单圈修正），她是一位很棒的合作者！感谢武汉大学的唐迎澳同学在实验数据处理部分的讨论，感谢博楠师兄、胤发师兄、纪新、郑勇在解析积分的数值检验过程中的畅所欲言的讨论和交流。与课题合作者之间的交流讨论，让我逐渐清楚合作者应该是什么样的以及不应该是什么样的。
+
+感谢中国科学院高能物理研究所的吕才典研究员，三年前作为本科毕业生的我得以邀请吕老师在研究小组内进行学术报告，使得我得以一窥重味物理的奥秘并激励我在这个领域内做出自己的贡献。感谢吕老师课题组的鲁隆舜、韩雪莹、王进、白颢阳同学，和你们毫无保留的交流使得我在重味物理的研究上有了更全面的认识。感谢南开大学的王玉明教授，2021年青岛QCD研讨会上的报告使得我第一次感受到重味物理高精度计算的严谨风格，\tb{「我们学习一个东西，算出一个值，目的是为了完全理解它以至于prompte它」}，学习单举衰变相关理论的过程中逐渐理解这句话的意义。感谢上海交通大学王伟教授关于粲夸克质量方案的讨论，这也是我们在三种粲夸克质量方案下进行全局拟合的动机。感谢意大利帕多瓦大学的Matteo Fael教授关于重味强子半轻单举衰变差异的答疑解惑以及德国锡根大学的Alexander Lenz教授对本文工作的高度评价。
+
+感谢郑州大学的云鹤师姐和文韬师兄、好朋友杜昌浩、岳聪聪、李旺生、宁佳豪、陆锦成、南京师范大学的王烨凡老师、南开大学的于汇鑫师兄、香港中文大学（深圳）的姬尧和王星老师，在人生重大方向选择的关键时刻，我们之间坦诚并毫无保留的分享各自的想法和经历使得我在选择上有了更清晰的方向。
+
+感谢兰州大学核学院理论组的各位师兄师弟师姐在生活和科研上的照顾和帮助，感谢组内的吴善进老师、刘明珠老师和徐吉老师、王迪、蒋华玉、丁剑南、黄克胜、汪建鹏、熊傲昇、杨雷师兄和贾彩萍师姐以及韩佳杰和李东浩师叔、余纪新、郑勇、胡舒曼、段铸钉和赵占山同学、冯天亮、裘璟靓和黄啸师弟。每次讨论会快速的将问题理清楚并给出相关的建议，生活上幽默风趣，丰富多彩的课余活动使得组内氛围轻松愉悦。感谢实验组的肖栋老师和李培荣老师、王泓鉴、彭云翊、王英豪、杜少旭和牛祺乐师兄和刘英师姐，在与各位的讨论中学习到了很多实验的知识，补充了我在实验方面的欠缺并使得本文工作得以顺利进行。
+
+感谢华中科技大学物理学院基础物理研究所的各位老师同学、感谢秦溱老师课题组内的国贺、胤发师兄和雯捷师姐、惠强以及海龙、佳元和弘锐师弟以及即将进组的李娜同学，大家对于学术都有着同样的热爱，无论是地铁上还是饭桌上，我们都可以毫无保留地分享和交流一些物理的理解和想法。
+
+正如士兵突击电视剧结尾袁朗对成才所言，“你们知道，我和你们一样大的时候，最像你们三个中谁吗？是你，成才。比吴哲更专心， 比许三多更知道自己想要的是什么，你的路还很长，成才，比许三多要长的多，同时，你的迷茫要比他多得多。如果这是你的路，你愿意来老A吗？” 关山难越，我非失路之人，踏上今后的科研之路，必将义无反顾。
+
+期待博士期间能够进一步提升自己的科研能力，之后与大家一起，做更加有趣且激动人心的工作！
+
+\tb{最后，感谢肖叶蕾同学始终如一的包容与理解，让我在无数个熬夜的夜晚仍能保持乐观。}
+\\
+\\
+\\
+\\
+\begin{center}
+    \tb{献给我的父母}\\
+    \tb{和所有关心我的人}
+\end{center}
+\begin{flushright}
+    \textit{2025年5月}\\
+    \text{于华中科技大学}
+\end{flushright}
+\end{document}
