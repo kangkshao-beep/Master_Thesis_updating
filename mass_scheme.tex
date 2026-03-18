@@ -1,0 +1,35 @@
+\chapter{粲夸克质量方案的讨论}
+\label{chap:mass_scheme}
+\section{引言}
+\section{阈值质量方案：1S质量方案}
+
+A. H. Hoang等人在上世纪末本世纪初对于1S质量方案进行了系统的研究，提出了1S质量方案的定义和计算方法，并将其应用于顶夸克质量的衰变过程。通过修饰的微扰展开对$\alpha_s$进行重求和以消除固定阶的「红外重整子任意性问题」，具体地，将其用于inclusive decay之类的“硬过程”时，必须使用upsilon expansion，使非微扰束缚能级数与普通过程的微扰级数正确配对。
+对于顶夸克的阈值对产生过程，1S质量方案提供了一个自然的框架来定义和计算顶夸克的质量。一个比较系统完整的质量转换关系被提出，并且在数值上展示了极好的收敛性(hep-ph/9904468(78))\cite{Hoang:1999zc}。
+
+\begin{equation}
+\begin{aligned}
+M_{1 S}= & M_t-\epsilon \frac{M_t C_F^2 a_s^2}{8} \\
+& -\epsilon^2 \frac{M_t C_F^2 a_s^2}{8}\left(\frac{a_s}{\pi}\right)\left[\beta_0(L+1)+\frac{a_1}{2}\right] \\
+& -\epsilon^3 \frac{M_t C_F^2 a_s^2}{8}\left(\frac{a_s}{\pi}\right)^2\left[\beta_0^2\left(\frac{3}{4} L^2+L+\frac{\zeta_3}{2}+\frac{\pi^2}{24}+\frac{1}{4}\right)+\beta_0 \frac{a_1}{2}\left(\frac{3}{2} L+1\right)\right. \\
+& \left.\quad+\frac{\beta_1}{4}(L+1)+\frac{a_1^2}{16}+\frac{a_2}{8}+\left(C_A-\frac{C_F}{48}\right) C_F \pi^2\right],
+\end{aligned}
+\label{eq:OS_to_1S_NNNLO}
+\end{equation}
+其中$L=\ln \left(\mu/\left(C_F a_s M_t\right)\right)$，$\epsilon$是upsilon expansion的展开参数。领头阶（LO），次领头阶(LO)、次次领头阶的贡献分别是$\epsilon$的领先幂次，线性项以及平方项，并以此类推。
+注意到，$M_{1S}/M_t$相对于1的偏离始于$\epsilon$的线性项，即$\mathcal{O}(\epsilon \alpha_s^2)$，此外，L的出现始于$\epsilon$的平方项。换而言之，$M_{t}=M_{1S}(1+\delta)$且$\delta \sim \mathcal{O}(\epsilon \alpha_s^2)$。代入L的表达式并展开至$\epsilon$的线性项，我们可以得到
+\begin{equation}
+    L=\ln \left(\mu/\left(C_F a_s M_t\right)\right)=\ln\left(\mu/\left(C_F a_s M_{1S}\right)\right)-\ln\left(1+\delta\right)=\ln\left(\mu/\left(C_F a_s M_{1S}\right)\right)-\delta+\frac{\delta^2}{2}+\mathcal{O}(\delta^3)
+\end{equation}
+若$L_{1S}$与$L_{OS}$的差异在$\mathcal{O}(\epsilon^n)$量级,则该差异出现于式\eqref{eq:OS_to_1S_NNNLO}中的$\epsilon^{n-1}$项,因此，$L_{1S}$与$L_{OS}$的差异对于$\mathcal{O}(\epsilon^{n-1})$的微扰级数展开截断而言可以忽略。
+
+对于具体物理观测量中的质量方案的Power Counting的讨论，则需要根据具体的物理过程和观测量来进行分析。例如对于精确至两圈图水平微扰修正的D介子单举半轻衰变过程的衰变宽度如下：
+\begin{equation}
+\begin{aligned}
+    \Gamma_{D_{i}} = \sum_{q = \mathrm{d}, \mathrm{s}} \hat{\Gamma}_0 \mrm{\left| V_{\mathrm{c}q} \right|^2} m_{\mathrm{c}}^5 \Big\{ 1 & + \frac{\alpha_s}{\pi} \frac{2}{3} \left( \frac{25}{4} - \pi^2 \right)\\
+    & + \frac{\alpha_s^2}{\pi^2} \left[ \frac{\beta_0}{4} \frac{2}{3} \left( \frac{25}{4} - \pi^2 \right) \log \left( \frac{\mu^2}{m_{\mathrm{c}}^2} \right) + 2.14690 n_l - 29.88311 \right]\\  
+    &- 8 \rho \delta_{\mathrm{s}q} - \frac{1}{2} \frac{\mu_{\pi}^{2}(D_{i})}{m_{\mathrm{c}}^2} - \frac{3}{2} \frac{\mu_{\mathrm{G}}^{2}(D_{i})}{m_{\mathrm{c}}^2} + 6 \frac{\rho_{\mathrm{D}}^3\left(D_{i}\right)}{m_{\mathrm{c}}^3} + \dots \Big\},
+\end{aligned}
+\label{eq:decaywidth}
+\end{equation}
+我们以截断至NNNLO的贡献为例进行说明：对数项$\ln(\mu^2/m_{c}^2)$出现于$\alpha_s^2$项，则该对数项对于upsilon expansion展开级数的贡献始于$\mathcal{O}(\epsilon^2)$量级，因此方便起见可对该对数项单独进行质量方案的转换，仅需对质量转换公式精确至$\mathcal{O}(\delta^2)$，即保留至$\mathcal{O}(\epsilon \alpha_s^2)$量级即可\footnote{这里讨论对应的三个问题分别是：1. 能否把式\eqref{eq:OS_to_1S_NNNLO}
+里L中的$M_{t}$直接换成$M_{1S}$; 2. 为什么代码中物理观测量里的log项没有直接应用质量转换公式而是保留了$1+\delta$的线性项之后再统一做$\epsilon$展开；3. 在1S质量方案下，NNNLO截断对应于什么样的丢弃规则。}。
