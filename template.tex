@@ -18,6 +18,10 @@
 \usepackage{graphicx}
 \usepackage{slashed} 
 \usepackage{braket}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{listings}
+\usepackage{xcolor}
 \newcommand{\tb}[1]{\textbf{#1}}
 \newcommand{\ov}{\overline}
 \newcommand{\skk}[1]{\textbf{\textcolor{Orange}{#1}}}
@@ -57,7 +61,7 @@
 \secret{公开}
 \cid{O572}
 %\yjsType{博士}
-\yjsType{硕士}
+\yjsType{博士}
 
 \yjsZsZy{\quad 学\quad 术\quad 学\quad 位\quad}
 % \yjsZsZy{\quad 专\quad 业\quad 学\quad 位\quad}
@@ -210,7 +214,7 @@ This study selects the global fit estimates of the fundamental parameters in the
 
 \begin{appendix}
     \input{appendix_A.tex}
-    %\input{appendix_B.tex}
+    \input{appendix_B.tex}
     %\input{appendix_C.tex}
     %\input{appendix_D.tex}
     %%\input{appendix_E.tex}
@@ -226,7 +230,7 @@ This study selects the global fit estimates of the fundamental parameters in the
 %=======%
 %引入参考文献文件
 %=======%
-\bibdatabase{bib/database}%bib文件名称 仅修改bib/ 后部分
+\bibdatabase{bib/database}
 \printbib
 % \nocite{*} %显示数据库中有的，但是正文没有引用的文献
 

@@ -1,0 +1,71 @@
+\chapter{本笔记latex编译机制与调试流程总结}
+\section{LaTeX参考文献编译机制与调试流程}
+MacOS系统升级之后，模板里的BibTeX编译流程出现了问题，导致所有参考文献都显示为\verb|[?]|。具体的，利用终端测试，讲问题锁定至「lualatex 因为找不到 STHeiti / STKaiti 提前崩掉了，导致 .bbl 没有被成功读入最终文档」，最终导致引用无法解析。
+
+这里有两种方案：1.改变模板中的相关字体，使用Macos中存在的字体进行替换，2.改变编译策略，将Lualatex改为Xelatex。目前我们采用第二种方案并解决了问题。以下是总结的BibTeX编译流程与调试方法
+
+
+\subsection{BibTeX 工作流程}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.42\textwidth}
+        \vspace{0pt}
+        \raggedright
+第一次Latex编译：生成 \texttt{.aux} 文件，记录引用信息,包含 
+\begin{verbatim}
+\citation{Fael:2019umf}
+\bibdata{database}
+\bibstyle{lzubib}
+...
+\end{verbatim}
+BibTex编译：读取template.aux,template.bib,lzubib.bst,生成template.bbl.\\
+后两次Latex编译：读取template.bbl，插入参考文献，稳定交叉引用。如果这里失败，所有的引用都会是\verb|[?]|。
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.52\textwidth}
+        \vspace{0pt}
+        \centering
+        \begin{tikzpicture}[
+            node distance=2.5cm,
+            box/.style={
+                draw,
+                rounded corners,
+                minimum width=4.8cm,
+                minimum height=1.2cm,
+                align=center,
+                thick
+            },
+            arrow/.style={->, thick}
+        ]
+
+        \node[box] (latex1) {第一次主编译\\ \texttt{xelatex template}};
+        \node[box, below of=latex1] (bibtex) {运行 BibTeX\\ \texttt{bibtex template}};
+        \node[box, below of=bibtex] (latex2) {第二次主编译\\ 读取 \texttt{.bbl}};
+        \node[box, below of=latex2] (latex3) {第三次主编译\\ 稳定引用};
+
+        \draw[arrow] (latex1) -- node[right]{生成 \texttt{.aux}} (bibtex);
+        \draw[arrow] (bibtex) -- node[right]{生成 \texttt{.bbl}} (latex2);
+        \draw[arrow] (latex2) -- node[right]{交叉引用稳定} (latex3);
+
+        \end{tikzpicture}
+    \end{minipage}
+
+    \caption{BibTeX 参考文献编译流程示意图}
+    \label{fig:bibtex-flow-vertical}
+\end{figure}
+
+\subsection{终端调试常用指令}
+
+\paragraph{1. 查看是否生成 bbl}
+
+\begin{verbatim}
+find . -name "*.bbl" 文件存在则会显示路径，否则无输出）
+grep citation template.aux 应该包含 \citation{...} ，否则正确记录引用信息
+bibtex template 手动运行bibtex，查看是否成功生成 bbl
+lualatex template 运行主编译，查看是否成功读取 bbl
+rm -f *.aux *.bbl *.blg *.toc *.lof *.lot *.out 清理缓存
+ls template.bbl 查看 bbl 是否存在
+grep -n "begin{enumerate}" *.tex 查看 enumerate 环境是否正确开始，
+grep -n "end{enumerate}" *.tex 查看 enumerate 环境是否正确结束，
+\end{verbatim}
