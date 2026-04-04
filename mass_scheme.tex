@@ -1,8 +1,139 @@
-\chapter{粲夸克质量方案的讨论}
+\chapter{夸克质量方案的讨论}
 \label{chap:mass_scheme}
 \section{引言}
-\section{阈值质量方案：1S质量方案}
+这里写从拉格朗日量出发的巴拉巴拉，引入下面的极质量介绍，当然先简单写一些轻夸克质量方案的介绍，最后介绍对于重夸克质量的naive方案，pole mass方案的简单介绍。
 
+本章的核心问题不是简单比较不同质量方案的定义，而是从 threshold $Q\bar Q$ 体系与静态总能量的物理图像出发，理解 pole mass 的局限、1S/PS 等阈值短距质量的构造逻辑，以及 $\overline{\mathrm{MS}}$ 质量在高能短距过程中的自然性。
+
+\section{极质量方案}
+极质量方案基于重夸克自能过程(图\ref{fig:bubble-renormalon})，定义为重夸克在传播子极点处的质量。该定义基于在壳重整化方案，要求修正后的重夸克质量等于物理质量，修正后的电荷等于物理电荷，传播子在极点处的留数等于1，并且在微扰论的逐阶都是well-defined。事实上，夸克质量并不同于电子质量，由于QCD中的夸克禁闭现象，夸克并非渐近态，且QCD的S矩阵在$p^2=m^2$处并不存在夸克极点。这种“非物理性”导致QCD中的极质量不可避免的带有$\mathcal{O}(\Lambda_{QCD})$量级的不确定性，这种不确定性表现为领先的红外重整子的模糊性问题。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]
+
+  \tikzset{
+    hq/.style={line width=0.9pt},
+    gluon/.style={
+      draw,
+      decorate,
+      decoration={coil,aspect=0.62,segment length=3.0mm,amplitude=1.45mm},
+      line width=0.45pt
+    },
+    dgluon/.style={
+      draw,
+      dashed,
+      decorate,
+      decoration={coil,aspect=0.62,segment length=3.0mm,amplitude=1.45mm},
+      line width=0.45pt
+    },
+    bubble/.style={
+      circle,
+      draw,
+      minimum size=0.82cm,
+      inner sep=0pt,
+      pattern=north east lines,
+      pattern color=black,
+      line width=0.45pt
+    },
+    momarrow/.style={
+      postaction={
+        decorate,
+        decoration={
+          markings,
+          mark=at position #1 with {\arrow{Latex[length=2.6mm,width=1.8mm]}}
+        }
+      }
+    },
+    two momarrows/.style args={#1,#2}{
+      postaction={
+        decorate,
+        decoration={
+          markings,
+          mark=at position #1 with {\arrow{Latex[length=2.6mm,width=1.8mm]}},
+          mark=at position #2 with {\arrow{Latex[length=2.6mm,width=1.8mm]}}
+        }
+      }
+    }
+  }
+
+  % 外部夸克线（左右各一个 p 箭头）
+  \draw[hq,two momarrows={0.12,0.92}] (0,0) -- (8.4,0);
+  \node at (1.05,-0.42) {$p$};
+  \node at (7.35,-0.42) {$p$};
+
+  % 左侧第一段胶子线（圈动量 k）
+  \draw[gluon,momarrow=0.58]
+    (1.78,0.00)
+    .. controls (1.76,0.30) and (1.84,0.72) ..
+    (2.07,1.02);
+  \node at (1.35,0.78) {$k$};
+
+  \node[bubble] (B1) at (2.18,1.28) {};
+
+  % 中间虚线胶子
+  \draw[dgluon]
+    (2.49,1.55)
+    .. controls (2.95,2.06) and (3.65,2.34) ..
+    (4.30,2.28);
+
+  \node[bubble] (B2) at (4.62,2.20) {};
+
+  % 右侧上方胶子
+  \draw[gluon]
+    (4.93,1.98)
+    .. controls (5.18,1.78) and (5.45,1.50) ..
+    (5.67,1.24);
+
+  \node[bubble] (B3) at (5.96,1.16) {};
+
+  % 右侧胶子回到底部夸克线
+  \draw[gluon]
+    (6.25,0.92)
+    .. controls (6.46,0.70) and (6.57,0.34) ..
+    (6.52,0.00);
+
+  % 内部夸克传播子（动量 p+k）
+  \draw[hq,momarrow=0.63] (1.78,0) -- (6.52,0);
+  \node at (4.15,0.34) {$p+k$};
+
+  % 顶点
+  \fill[blue] (1.78,0.00) circle (3.4pt);
+  \fill[blue] (6.52,0.00) circle (3.4pt);
+
+\end{tikzpicture}
+\caption{夸克自能修正图中的链式泡沫图}
+\label{fig:bubble-renormalon}
+\end{figure}
+仿照照量子电动力学中计算电子自能过程的标准技术，最终该图的贡献是
+\begin{equation}
+    -i \Sigma(\slashed{p})
+=
+(-i g_s)^2 C_F \mu^{2\epsilon}
+\int \frac{d^d k}{(2\pi)^d}\,
+\gamma_\mu\,
+\frac{i(\slashed{p}+\slashed{k}+m)}{(p+k)^2-m^2+i0}\,
+\gamma_\nu\,
+\frac{-i g^{\mu\nu}}{k^2+i0}\,.
+\label{eq:self-energy}
+\end{equation}
+以单粒子不可约费曼图为例，对外部动量为 $p$ 的夸克线，取圈动量为 $k$，则内部夸克传播子的动量为 $p+k$。两个夸克——胶子顶点分别贡献因子 $-ig_s\gamma^\mu T^a$，内部夸克传播子贡献
+\[
+\frac{i(\slashed p+\slashed k+m)}{(p+k)^2-m^2+i0},
+\]
+在 Feynman 规范下，内部胶子传播子贡献
+\[
+\frac{-i\,\delta^{ab}g_{\mu\nu}}{k^2+i0}.
+\]
+再乘上维数正规化下的圈积分测度 $\mu^{2\epsilon}\!\int d^d k/(2\pi)^d$，并将颜色指标收缩为$T^aT^a=C_F,$
+便得到式\eqref{eq:self-energy}的具体形式。 
+其中 $d=4-2\epsilon$，$\mu$ 是维数正规化中引入的 ’t Hooft 质量尺度\footnote{在维度正规化方案中引入质量尺度$\mu$这一现象同时存在于QED与QCD的单圈自能修正计算过程。原因在于积分维度的改变引起规范耦合常数携带量纲，$\mu$是量纲补偿因子，使得$g_0=\mu^{\epsilon}Z_g g$不携带量纲。$\mu$同时是重整化尺度(量纲为1)，\textbf{物理可观测量若考虑完整的微扰修正，则不应该对$\mu$存在依赖。换而言之，有限阶截断后会保留残余的重整化尺度依赖，这也被用来估计高阶修正不确定性的来源之一}。具体地，若考虑完整微扰修正的物理可观测量$\mathcal{O}$，其不存在对重整化尺度的依赖，因此$\mu\frac{d}{d \mu}\mathcal{O}=0$。对于有限阶微扰修正的截断，该方程并非严格为0，这个不为零的量对应被截断的更高阶修正。换而言之，将某个可观测量写成标准微扰展开形式$O_N(\mu)=\sum_{n=0}^N c_n\left(\ln \frac{\mu}{Q}\right) \alpha_s^{n+p}(\mu)$, $p$是该观测量的微扰展开从$\alpha_s$的第几阶出现，其精确结果不存在对重整化尺度的依赖。但对于有限阶修正，其满足$\mu \frac{d}{d \mu} O_N=\mathcal{O}\left(\alpha_s^{N+p+1}\right)$.该方程说明，对于有限阶截断的物理可观测量，其对重整化尺度的敏感性本身就是”下一阶乃至更高阶未算项“。因此对重整化尺度在某个合理区间里遍历取值得到物理可观测量的数值改变，自然可以被拿来作为 missing higher orders 修正的经验估计，也就是所谓的 \textbf{renormalization scale variation}}。
+\section{阈值质量方案：1S质量方案}
+1S质量方案并非对极点质量的任意重命名，而是从非相对论 $Q \bar{Q}$ 阈值动力学中抽取出的短距质量。它定义为「虚构」$1^3 S_1$ 夸克偶素基态微扰质量的一半，因此天然吸收了总静能 $2 m_{\text {pole }}+V_{\text {stat }}$ 中的物理可控部分。由于 pole mass 的 $O\left(\Lambda_{Q C D}\right)$ 红外重整子与静态势中的对应长程修正在总静能中相互抵消， 1S质量方案也随之摆脱了极点质量方案中的领头红外重整子任意性。它适合描述 $q\bar{q}$ 等阈值过程；当将其用于单举衰变时，需要基于形式展开参数$\epsilon$进行来保证与极点质量方案中扰级数之间的红外敏感项逐阶一致地重组与对消。
+\subsection{从单胶子交换到pNRQCD的静态势物理图像}
+\subsection{1S质量方案}
+    这里写如何规避红外重整子任意性问题，
+\subsection{Upsilon Expansion}
 A. H. Hoang等人在上世纪末本世纪初对于1S质量方案进行了系统的研究，提出了1S质量方案的定义和计算方法，并将其应用于顶夸克质量的衰变过程。通过修饰的微扰展开对$\alpha_s$进行重求和以消除固定阶的「红外重整子任意性问题」，具体地，将其用于inclusive decay之类的“硬过程”时，必须使用upsilon expansion，使非微扰束缚能级数与普通过程的微扰级数正确配对。
 对于顶夸克的阈值对产生过程，1S质量方案提供了一个自然的框架来定义和计算顶夸克的质量。一个比较系统完整的质量转换关系被提出，并且在数值上展示了极好的收敛性(hep-ph/9904468(78))\cite{Hoang:1999zc}。
 
@@ -15,14 +146,14 @@ M_{1 S}= & M_t-\epsilon \frac{M_t C_F^2 a_s^2}{8} \\
 \end{aligned}
 \label{eq:OS_to_1S_NNNLO}
 \end{equation}
-其中$L=\ln \left(\mu/\left(C_F a_s M_t\right)\right)$，$\epsilon$是upsilon expansion的展开参数。领头阶（LO），次领头阶(LO)、次次领头阶的贡献分别是$\epsilon$的领先幂次，线性项以及平方项，并以此类推。
+其中$L=\ln \left(\mu/\left(C_F a_s M_t\right)\right)$，$\epsilon$是upsilon expansion的形式展开参数，用于标记QCD微扰展开的阶数。具体地，微扰级数中的$\mathcal{O}(\alpha_s^N)$项被赋予$\epsilon^N$，而极质量到1S质量转换关系中的$\mathcal{O}(\alpha_s^N)$（除去对数项）则被视为$\epsilon^{N-1}$;按$\epsilon$重新展开并截断到固定阶后，最终再令该参数取1，在技术上以完成重求并实现消除红外重整子任意性问题的目的。
 注意到，$M_{1S}/M_t$相对于1的偏离始于$\epsilon$的线性项，即$\mathcal{O}(\epsilon \alpha_s^2)$，此外，L的出现始于$\epsilon$的平方项。换而言之，$M_{t}=M_{1S}(1+\delta)$且$\delta \sim \mathcal{O}(\epsilon \alpha_s^2)$。代入L的表达式并展开至$\epsilon$的线性项，我们可以得到
 \begin{equation}
     L=\ln \left(\mu/\left(C_F a_s M_t\right)\right)=\ln\left(\mu/\left(C_F a_s M_{1S}\right)\right)-\ln\left(1+\delta\right)=\ln\left(\mu/\left(C_F a_s M_{1S}\right)\right)-\delta+\frac{\delta^2}{2}+\mathcal{O}(\delta^3)
 \end{equation}
 若$L_{1S}$与$L_{OS}$的差异在$\mathcal{O}(\epsilon^n)$量级,则该差异出现于式\eqref{eq:OS_to_1S_NNNLO}中的$\epsilon^{n-1}$项,因此，$L_{1S}$与$L_{OS}$的差异对于$\mathcal{O}(\epsilon^{n-1})$的微扰级数展开截断而言可以忽略。
 
-对于具体物理观测量中的质量方案的Power Counting的讨论，则需要根据具体的物理过程和观测量来进行分析。例如对于精确至两圈图水平微扰修正的D介子单举半轻衰变过程的衰变宽度如下：
+对于具体物理观测量中的质量方案的幂次分析的讨论，则需要根据具体的物理过程和观测量来进行分析。例如对于精确至两圈图水平微扰修正的D介子单举半轻衰变过程的衰变宽度如下：
 \begin{equation}
 \begin{aligned}
     \Gamma_{D_{i}} = \sum_{q = \mathrm{d}, \mathrm{s}} \hat{\Gamma}_0 \mrm{\left| V_{\mathrm{c}q} \right|^2} m_{\mathrm{c}}^5 \Big\{ 1 & + \frac{\alpha_s}{\pi} \frac{2}{3} \left( \frac{25}{4} - \pi^2 \right)\\
@@ -33,3 +164,7 @@ M_{1 S}= & M_t-\epsilon \frac{M_t C_F^2 a_s^2}{8} \\
 \end{equation}
 我们以截断至NNNLO的贡献为例进行说明：对数项$\ln(\mu^2/m_{c}^2)$出现于$\alpha_s^2$项，则该对数项对于upsilon expansion展开级数的贡献始于$\mathcal{O}(\epsilon^2)$量级，因此方便起见可对该对数项单独进行质量方案的转换，仅需对质量转换公式精确至$\mathcal{O}(\delta^2)$，即保留至$\mathcal{O}(\epsilon \alpha_s^2)$量级即可\footnote{这里讨论对应的三个问题分别是：1. 能否把式\eqref{eq:OS_to_1S_NNNLO}
 里L中的$M_{t}$直接换成$M_{1S}$; 2. 为什么代码中物理观测量里的log项没有直接应用质量转换公式而是保留了$1+\delta$的线性项之后再统一做$\epsilon$展开；3. 在1S质量方案下，NNNLO截断对应于什么样的丢弃规则。}。
+\section{阈值减除质量方案: PS质量方案}
+\section{标准UV短矩质量：$\bar{\text{MS}}$质量方案}
+\section{不同质量方案的对比}
+

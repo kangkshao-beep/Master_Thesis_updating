@@ -475,6 +475,26 @@ E_{\mathrm{e}}^{\prime} = \gamma E_{\mathrm{e}}(1 - \beta \cos \theta),
         从左至右分别是领头阶(Leading Order, LO)，次领头阶(Next to leading Order, NLO)，次次领头阶(Next Next to leading Order, NNLO)和次次次领头阶（Next Next Next to leading Order, NNNLO）的修正($\mrm{\alpha_s=0.387}$)。极质量方案下D介子半轻单举衰变宽度的微扰展开级数为
         $$\Gamma_{\mrm{sl}}^{\mrm{D}}\sim1-0.768104 \alpha_s-2.37521 \alpha_s^2-10.7295 \alpha_s^3+\cdots,$$
         收敛行为较差。因此，1S质量方案是比较合适的粲夸克质量方案，本文的唯象学分析将讨论$\overline{\text{MS}}$和1S质量方案下的全局拟合。
+        
+        此外，归一化能矩本质上是一个比值：
+而在 HQE 中，\(M_n\) 与 \(\Gamma_{\rm cut}\) 本身都已经按 \(\alpha_s\) 与 \(1/m_b\) 组织为截断展开，因此在形成比值之后，必须再按同一power counting的规则对其重新展开并截断；否则，若直接将截断后的分子与分母相除，便会自动混入部分更高阶项，从而破坏固定阶计算的一致性。 
+归一化能矩不仅反映了衰变宽度与原矩之间微扰行为的收敛性差异，同时也反映了电子能谱中的部分区域关于高阶微扰修正的影响。对于这部分的讨论，需要case by case的进行分析。
+
+这里再给一个具体的例子进行说明re-expansion的必要性: $A=1+a_1\epsilon$,$b=1+b_1\epsilon$ 若讨论他们的比值，R=A/B，直接把固定阶结果拿来做商，则会发生
+\begin{equation}
+R_{\mathrm{direct}}=\frac{1+a_1 \epsilon}{1+b_1 \epsilon} .
+\end{equation}
+表面看，分子分母都保留到$\mathcal{O}(\epsilon)$是固定阶，但实际上分母部分的到赎回自动带出无穷多项：
+\begin{equation}
+\frac{1}{1+b_1 \epsilon}=1-b_1 \epsilon+b_1^2 \epsilon^2-b_1^3 \epsilon^3+\cdots
+\end{equation}
+此时$R_{\text {direct }}=\left(1+a_1 \epsilon\right)\left(1-b_1 \epsilon+b_1^2 \epsilon^2+\cdots\right)$. 整理有$$
+R_{\text {direct }}=1+\left(a_1-b_1\right) \epsilon+\left(b_1^2-a_1 b_1\right) \epsilon^2+\cdots .
+$$，尽管输入的分子分母各自精确值线性项，但直接做商显式的引入了$\epsilon^2,\epsilon^3,\cdots$,的项，破坏了固定阶计算的一致性。二阶信息我们不知道，但直接做商之后，却得到了具体的二阶项，该项不是被微扰展开严格算出来的，只是把一阶截断结果做了代数运算引入的。这没有固定阶讨论的意义。我们只讨论截断至线性项的修正，则需要re-expansion，得到
+\begin{equation}
+R_{\mathrm{re}-\exp }=1+\left(a_1-b_1\right) \epsilon+O\left(\epsilon^2\right) .
+\end{equation}
+其作用在于将这个ratio重新组织到我们想要讨论的这一阶。这部分对于R值的讨论同样成立。
 \subsection{唯象学分析}
 为从$\mrm{D}$介子半轻单举衰变的实验数据中实现重夸克有效理论非微扰参数的拟合估计。本文采用$\mrm{D\to X_{\rm{c},\rm{s}} e^+ \nu_{e}}$过程的衰变宽度，电子能量一阶原点矩与电子能量第二、三、四阶中心矩的实验观测值和相应理论表达式进行全局拟合。在幂次修正精确至量纲六算符的精度下，包含以下的微扰参数：
 \begin{equation}
