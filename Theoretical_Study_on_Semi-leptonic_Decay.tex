@@ -46,7 +46,7 @@ $\mrm{b \rightarrow c \ell \nu}$过程的弱有效哈密顿为\ct{manohar2000hea
     \end{equation}
 基于算符乘积展开，当$x\sim 0$时该非局域流算符的编时乘积在可以用一组局域算符进行级数展开，即
 \begin{equation}
-    \operatorname{T}[J_{\mrm{L} \alpha}^{\dagger}(x) J_{\mrm{L} \beta}(0)]=\sum C^n(x) \mathscr{O}_n(0),
+    \operatorname{T}[J_{\mrm{L} \alpha}^{\dagger}(x) J_{\mrm{L} \beta}(0)]=\sum C^n(x) \mathcal{O}_n(0),
 \end{equation}
 其中Wilson系数可以通过量子场论微扰论进行逐阶微扰展开。从QCD费曼规则出发，强子流编时乘积在微扰论的领头阶有：
 \begin{equation}
@@ -453,7 +453,7 @@ $\mrm{\bar{B}}\to\mrm{X_c e\nu}$过程的强子张量约定如下
     其中，$D_\mu=\partial_\mu+i g_s G_\mu^a T^a$是协变微分算子，$\mrm{G_{\mu\nu}}$是规范场强张量，$\mrm{b_{v}}$是静止底夸克场。$\lambda_1, \lambda_2$定义于渐进HQET区域，但实际计算过程往往位于有限夸克质量态，两者的差异如下：
     $$\mrm{\mu_\pi^2=-\lambda_1}+\mathcal{O} \left(1 / m_\mrm{b}\right)\quad \mrm{\mu_G^2=3 \lambda_2}+\mathcal{O}\left(1 / m_\mrm{b}\right)$$
    
-    两种参数化方案之间关于结构函数约定的全局差异如下\footnote{这里的变量替换涉及到Dirac-delta函数及其高阶导函数，需要考虑正确地处理 Delta 函数导数的所有零点并考虑额外的雅可比行列式。$n= 0，1，2$分指别至Dirac delta函数，一阶导函数，二阶导函数}：
+    两种参数化方案之间关于结构函数约定的全局差异如下\footnote{这里的变量替换涉及到Dirac-delta函数及其高阶导函数，需要考虑正确地处理 Delta 函数导数的所有零点并考虑额外的雅可比行列式。$n= 0, 1, 2$分别指至Dirac delta函数，一阶导函数，二阶导函数}：
     \begin{equation}
         \begin{aligned}
                 W_{\alpha \beta}(q^{2}, \hat{u}) &= 4 \cdot 2^{n+1} (-1)^{n} W^{\prime}_{\alpha \beta}(q^{2}, q^{0}) \\
@@ -488,7 +488,7 @@ $\mrm{\bar{B}}\to\mrm{X_c e\nu}$过程的强子张量约定如下
     \end{equation}    
     \begin{equation}
         \frac{\mathrm{d} \Gamma}{\mathrm{d} \hat{q}^2 \, \mathrm{d} \hat{E}_{\mathrm{e}}} = \frac{\mrm{d} \Gamma}{ \mathrm{d} \hat{E}_{\mrm{\ell}} \,  \mathrm{d}  \hat{q}^2}
-        \label{eq:2:25}
+        \label{eq:2:26}
     \end{equation}    
     关于\ref{eq:2:25}\footnote{这里的$(-\frac{1}{2})^{n}$来自于Dirac delta函数中变量替换对雅各比行列式的贡献，即上Dirac delta函数的零点和额外的雅各比行列式），树图阶没有来自被积函数变量替换带来的雅各比行列式。}, 由于分部积分引入关于积分结果的冗余自由度，即存在多种等价形式的积分结果，即\footnote{\ref{eq:2:27}第二行的公式是的$f^{\prime}(y)$的意思是先做x到y的替换，再对y整体求导。另一个公式则不用考虑这个次序：$$f(x)\delta^{\prime\prime}(x-y)=f(y)\delta^{\prime\prime}(x-y)-2f^{\prime}(x)\delta^{\prime}(x-y)-f^{\prime}(x)\delta(x-y)$$这个公式是对$f(x) \delta(x-y)=f(y) * \delta(x-y)$求两次关于x的导数整理而来。}:
     \begin{equation}
@@ -515,9 +515,9 @@ $\mrm{\bar{B}}\to\mrm{X_c e\nu}$过程的强子张量约定如下
     \frac{1}{\Gamma_{0}}\Gamma=1-\frac{1}{2 m_{c}^2}\mu_{\pi}^{2}-\frac{3}{2 m_{c}^2}\mu_{G}^{2}
     \label{eq:decaywidth_C_tree}
 \end{equation}
-式\eqref{eq:decaywidth_C_tree}中, $\mrm{V_{\text{CKM}}}$主要包含两部分，即$\mrm{V_{\text{cs}}}$和$\mrm{V_{\text{cd}}}$,末态夸克质量取零极限对应于$\mrm{c\to d}$跃迁；对于$\mrm{c\to s}$跃迁，由于奇异夸克质量并非特别小，需要作为软自由度进行保留。本文采用Mannel等人的结果\ct{Fael:2019umf}来考虑末态有限夸克质量效应对粲强子半轻单举衰变的修正。
+式\eqref{eq:decaywidth_C_tree}中, $\mrm{V_{\text{CKM}}}$主要包含两部分, 即$\mrm{V_{\text{cs}}}$和$\mrm{V_{\text{cd}}}$, 末态夸克质量取零极限对应于$\mrm{c\to d}$跃迁；对于$\mrm{c\to s}$跃迁, 由于奇异夸克质量并非特别小，需要作为软自由度进行保留。本文采用Mannel等人的结果\ct{Fael:2019umf}来考虑末态有限夸克质量效应对粲强子半轻单举衰变的修正。
 \section{微扰修正}
-本节讨论$\mrm{D\to X e^{+}\nu_{e}}$过程单圈水平上领先幂次的修正：从$\mrm{B\to X_{\text{c}}e\nu}$过程的领先幂次出发，取末态夸克零质量极限可得$\mrm{B\to X_{\text{u}}e\nu}$过程的结构函数。此外讨论$\mrm{B\to X_{\text{u}}e\nu}$的相空间解析积分，得到$\mrm{B\to X_{\text{u}}e\nu}$过程的电子能谱。基于粲强子与底强子单举衰变的区别，可得粲强子单举衰变的电子能谱。由于重夸克展开在电子能量末端失效，因此需要对电子能谱进行加权积分，得到衰变宽度、电子能量矩等各种具有非微扰参数依赖的物理量。
+本节讨论$\mrm{D\to X e^{+}\nu_{e}}$过程单圈水平上领先幂次的修正：从$\mrm{B\to X_{\text{c}}e\nu}$过程的领先幂次出发，取末态夸克零质量极限可得$\mrm{B\to X_{\text{u}}e\nu}$过程的结构函数。此外讨论$\mrm{B\to X_{\text{u}}e\nu}$的相空间解析积分，得到$\mrm{B\to X_{\text{u}}e\nu}$过程的电子能谱。基于粲强子与底强子单举衰变的区别，可得粲强子单举衰变的电子能谱。由于重夸克展开在电子能量末端失效, 因此需要对电子能谱进行加权积分, 得到衰变宽度、电子能量矩等各种具有非微扰参数依赖的物理量。
 
 \subsection{单圈水平上$\mrm{B\to X_{\text{c}}e\nu}$过程的领先幂次修正}
 $\mrm{B\to X_{\text{c}}e\nu}$过程的微分衰变宽度是
@@ -528,11 +528,11 @@ $\mrm{B\to X_{\text{c}}e\nu}$过程的微分衰变宽度是
     & \times \theta \left[ \frac{1}{2} \left( 1 - \rho + \hat{q}^2 - \hat{u} \right) - \hat{E}_{\mathrm{e}} - \frac{\hat{q}^2}{4 \hat{E}_{\mathrm{e}}} \right],
     \end{aligned}
 \end{equation}
-其中，$W_{i}, i=1, 2, 3$是该过程标量结构函数，它可以被强相互作用耦合常数与底夸克质量负幂次进行双重展开，
+其中 $W_{i}, i=1, 2, 3$是该过程标量结构函数，它可以被强相互作用耦合常数与底夸克质量负幂次进行双重展开,
 \begin{equation}
     W_i = W_i^{(0)} + \frac{\mu_{\pi}^2}{2 m_{\mathrm{b}}^2} W_i^{(\pi, 0)} + \frac{\mu_{\mathrm{G}}^2}{2 m_{\mathrm{b}}^2} W_i^{(\mathrm{G}, 0)} + \frac{\alpha_s}{\pi} \left[ \left[ C_F W_i^{(1)} \right] + C_F \frac{\mu_{\pi}^2}{2 m_{\mathrm{b}}^2} W_i^{(\pi, 1)} + \frac{\mu_{\mathrm{G}}^2}{2 m_{\mathrm{b}}^2} W_i^{(\mathrm{G}, 1)} \right]+\cdots,
 \end{equation}
-其中，$W_{i}^{(1)}$可由在单圈水平上完整理论和有效理论之间的算符匹配得到。该匹配过程基于图\ref{fig:Matching_NLO}完成，
+其中 $W_{i}^{(1)}$可由在单圈水平上完整理论和有效理论之间的算符匹配得到。该匹配过程基于图\ref{fig:Matching_NLO}完成,
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{MatchingNLO.png}
@@ -559,7 +559,7 @@ $$
 $$
 I_{2,0}=\int_0^1 d y \frac{\ln (1-y)}{\bar{\chi}(y)}=\frac{\operatorname{Li}_2\left(1-E_0\left(1+t_0\right)\right)-\mathrm{Li}_2\left(1-E_0\left(1-t_0\right)\right)}{\sqrt{\lambda_0}},
 $$
-其中， $a_1=\frac{2 t_0 /\left(1+t_0\right)}{1-E_0\left(1-t_0\right)}, \quad a_2=\frac{2 t_0 E_0}{1-E_0\left(1-t_0\right)}$，$E_0=\frac{1}{2}\left(1+\rho-\hat{q}^2\right)$，$\lambda=4\left(\hat{q}_0^2-\hat{q}^2\right)=4\left(E^2-\rho-\hat{u}\right)$， $\lambda_0=4\left(E_0^2-\rho\right)$， $t=\frac{\sqrt{\lambda}}{2 E}, \quad t_0=\frac{\sqrt{\lambda_0}}{2 E_0}$，$E_0=\frac{1}{2}\left(1+\rho-\hat{q}^2\right)$.
+其中， $a_1=\frac{2 t_0 /\left(1+t_0\right)}{1-E_0\left(1-t_0\right)}, \quad a_2=\frac{2 t_0 E_0}{1-E_0\left(1-t_0\right)}$, $E_0=\frac{1}{2}\left(1+\rho-\hat{q}^2\right)$, $\lambda=4\left(\hat{q}_0^2-\hat{q}^2\right)=4\left(E^2-\rho-\hat{u}\right)$, $\lambda_0=4\left(E_0^2-\rho\right)$, $t=\frac{\sqrt{\lambda}}{2 E}, \quad t_0=\frac{\sqrt{\lambda_0}}{2 E_0}$, $E_0=\frac{1}{2}\left(1+\rho-\hat{q}^2\right)$.
 对于实发射部分$R_{i}$，其具体解析形式为：
 $$
 \begin{aligned}
@@ -577,7 +577,7 @@ R_3\left(\hat{q}^2, \hat{u}\right)= & -\frac{(\hat{\omega}-2) \hat{u}-\hat{\omeg
 & -\frac{3 \hat{\omega}+\rho}{2(\hat{\omega}+\rho)(\hat{u}+\rho)}-\frac{8 \hat{\omega}+5 \hat{\omega}^2-3 \hat{\omega} \hat{u}+4 \rho+4 \hat{\omega} \rho-2 \hat{u} \rho}{\lambda_b(\hat{\omega}+\rho)},
 \end{aligned}
 $$
-其中，$\tau=\frac{\hat{\omega}-\hat{u}+\sqrt{\lambda_b}}{\hat{\omega}-\hat{u}-\sqrt{\lambda_b}}$，$\hat{\omega}=\hat{q}^2-1-\rho=-\omega-\rho$, $\lambda_{b}=\lambda$.
+其中，$\tau=\frac{\hat{\omega}-\hat{u}+\sqrt{\lambda_b}}{\hat{\omega}-\hat{u}-\sqrt{\lambda_b}}$, $\hat{\omega}=\hat{q}^2-1-\rho=-\omega-\rho$, $\lambda_{b}=\lambda$.
 此外，引入Plus Distribution以孤立出红外发散和共线发散是必要的，Plus Distribution定义如下，
 \begin{equation}
     \int f(\hat{u})\left[\frac{1}{\hat{u}}\right]_{+} d \hat{u}=\int_0^1 \frac{f(\hat{u})-f(0)}{\hat{u}} d \hat{u}.
@@ -626,7 +626,7 @@ $r_{3}^{(1)},r_{3}^{(2)}, s_{3}$将参与到共线发散和红外发散的相消
     \int_0^1 f(\hat{u}) \frac{1}{\hat{u}+\rho} d \hat{u}=\int_0^1 \frac{f(\hat{u})-f(0)+f(0)}{\hat{u}+\rho} d \hat{u}=\int_0^1 f(\hat{u})\left(\left[\frac{1}{\hat{u}}\right]_{+}-\ln \rho \delta(\hat{u})\right) d \hat{u}+O(\rho),
     \label{eq:pd1}
 \end{equation}
-对于$\frac{1}{\hat{u}+\rho}$项，积分意义上如下的等效是合法且必要的，
+对于$\frac{1}{\hat{u}+\rho}$项, 积分意义上如下的等效是合法且必要的,
 $$
 \frac{1}{\hat{u}+\rho} \rightarrow\left[\frac{1}{\hat{u}}\right]_{+}-\ln \rho \delta(\hat{u}).
 $$
@@ -656,7 +656,7 @@ $$
     (-3/2-\rho/\omega)\ln\rho \delta(\hat{u}).
 \end{equation}
 \paragraph{Plus Distribution部分}
-关于$\hat{u}$的奇点隐藏在积分$I_{1}$和$I_{1，0}$中，由Plus Distribution的定义（式\eqref{eq:pb_def}）可得关于这部分的讨论聚焦于
+关于$\hat{u}$的奇点隐藏在积分$I_{1}$和$I_{1,0}$中，由Plus Distribution的定义（式\eqref{eq:pb_def}）可得关于这部分的讨论聚焦于
 \begin{equation}
     \frac{I_1-I_{1,0}}{\hat{u}},
     \label{eq:sing11}
@@ -786,8 +786,8 @@ $f(\hat{u})$一般是关于$\hat{u}$的多项式，$\hat{u}$的积分上限由He
     \begin{aligned}
         \mu_\pi^2(D_i) &\equiv \langle D_i| \bar c_v(iD)^2 c_v| D_i \rangle /(2m_{D_i}) , \; \\
         \mu_G^2(D_i) &\equiv \langle D_i| \bar c_v (iD_\alpha)(iD_\beta)(-i\sigma^{\alpha\beta}) c_v| D_i \rangle  /(2m_{D_i}),  \\
-        \rho_{LS}^3(D_i) &\equiv {1\over2}\langle D_i| \bar c_v \{(iD_\alpha), [iv\cdot D, iD_\beta ]\} (-i\sigma^{\alpha\beta})| D_i \rangle /(2m_{D_i}) , \;\\ 
-        \rho^3_{D}(D_i) &\equiv {1\over2}\langle D_i| \bar c_v  [(iD^\mu), [iv\cdot D, iD_\mu]] c_v | D_i \rangle /(2m_{D_i}). \; \\
+        \rho_{LS}^3(D_i) &\equiv \frac{1}{2}\langle D_i| \bar c_v \{(iD_\alpha), [iv\cdot D, iD_\beta ]\} (-i\sigma^{\alpha\beta})| D_i \rangle /(2m_{D_i}) , \;\\ 
+        \rho^3_{D}(D_i) &\equiv \frac{1}{2}\langle D_i| \bar c_v  [(iD^\mu), [iv\cdot D, iD_\mu]] c_v | D_i \rangle /(2m_{D_i}). \; \\
         \end{aligned}
 \end{equation}
       n阶电子能量原点矩，其定义如下
@@ -797,41 +797,44 @@ $f(\hat{u})$一般是关于$\hat{u}$的多项式，$\hat{u}$的积分上限由He
       其中， $\Gamma$是衰变宽度，$n=1, 2, 3\cdots$.
       对电子能谱进行加权积分，前四阶电子能量（原点）矩.
       如下所示，
+      {\scriptsize
       \begin{equation}
-        \scriptsize
         \begin{aligned}
-            \langle E_{e}\rangle_{D_{i}}&=\frac{\hat{\Gamma}_0}{    \Gamma_{D_{i}}}\sum_{q=d,s} \left|V_{cq}\right|^2 m_{c}^6 \left[\frac{3}{10} + \frac{\alpha_{s}}{\pi} a_1^{(1)} + {\alpha_s^2\over \pi^2}a_1^{(2)} -3\rho\delta_{sq} -\frac{1}{2}\frac{\mu_{G}^{2}(D_{i})}{m_{c}^{2}} +\frac{139}{30} \frac{\rho_D^3\left(D_{i}\right)}{m_c^3}+\frac{3}{10} \frac{\rho_{L S}^3\left(D_{i}\right)}{m_c^3}+ ...\right],\\
-            \langle E_{e}^{2} \rangle_{D_{i}} &=\frac{\hat{\Gamma}_0}{\Gamma_{D_{i}}} \sum_{q=d,s}\left|V_{cq}\right|^2 m_c^7 \left[ \frac{1}{10} + \frac{\alpha_{s}}{\pi} a_2^{(1)}  + {\alpha_s^2\over \pi^2}a_2^{(2)}  - \frac{6}{5} \rho\delta_{sq} + \frac{1}{12}\frac{\mu_{\pi}^2(D_{i})}{ m_c^2} - \frac{11}{60}\frac{\mu_G^2(D_{i})}{ m_c^2} +\frac{17}{6} \frac{\rho_D^3\left(D_{i}\right)}{m_c^3} \right.\nonumber \\
+            \langle E_{e}\rangle_{D_{i}}&=\frac{\hat{\Gamma}_0}{    \Gamma_{D_{i}}}\sum_{q=d,s} \left|V_{cq}\right|^2 m_{c}^6 \left[\frac{3}{10} + \frac{\alpha_{s}}{\pi} a_1^{(1)} + \frac{\alpha_s^2}{\pi^2}a_1^{(2)} -3\rho\delta_{sq} -\frac{1}{2}\frac{\mu_{G}^{2}(D_{i})}{m_{c}^{2}} +\frac{139}{30} \frac{\rho_D^3\left(D_{i}\right)}{m_c^3}+\frac{3}{10} \frac{\rho_{L S}^3\left(D_{i}\right)}{m_c^3}+ ...\right],\\
+            \langle E_{e}^{2} \rangle_{D_{i}} &=\frac{\hat{\Gamma}_0}{\Gamma_{D_{i}}} \sum_{q=d,s}\left|V_{cq}\right|^2 m_c^7 \left[ \frac{1}{10} + \frac{\alpha_{s}}{\pi} a_2^{(1)}  + \frac{\alpha_s^2}{\pi^2}a_2^{(2)}  - \frac{6}{5} \rho\delta_{sq} + \frac{1}{12}\frac{\mu_{\pi}^2(D_{i})}{ m_c^2} - \frac{11}{60}\frac{\mu_G^2(D_{i})}{ m_c^2} +\frac{17}{6} \frac{\rho_D^3\left(D_{i}\right)}{m_c^3} \right.\nonumber \\
             &\qquad\qquad\qquad\qquad\qquad \left. +\frac{7}{30} \frac{\rho_{L S}^3\left(D_{i}\right)}{m_c^3}+ ... \right], \nonumber\\
-            \left\langle E_e^3\right\rangle_{D_{i}}&=\frac{\hat{\Gamma}_0}{\Gamma_{D_{i}}}\sum_{q=d,s}\left|V_{cq}\right|^2 m_c^8\left[\frac{1}{28} + \frac{\alpha_{s}}{\pi} a_3^{(1)}  + {\alpha_s^2\over \pi^2}a_3^{(2)}  -\frac{1}{2} \rho\delta_{sq} +\frac{1}{14} \frac{\mu_\pi^2\left(D_{i}\right)}{ m_c^2}-\frac{1}{14} \frac{\mu_G^2\left(D_{i}\right)}{ m_c^2}+\frac{223}{140} \frac{\rho_D^3\left(D_{i}\right)}{m_c^3}\right. \nonumber\\
+            \left\langle E_e^3\right\rangle_{D_{i}}&=\frac{\hat{\Gamma}_0}{\Gamma_{D_{i}}}\sum_{q=d,s}\left|V_{cq}\right|^2 m_c^8\left[\frac{1}{28} + \frac{\alpha_{s}}{\pi} a_3^{(1)}  + \frac{\alpha_s^2}{\pi^2}a_3^{(2)}  -\frac{1}{2} \rho\delta_{sq} +\frac{1}{14} \frac{\mu_\pi^2\left(D_{i}\right)}{ m_c^2}-\frac{1}{14} \frac{\mu_G^2\left(D_{i}\right)}{ m_c^2}+\frac{223}{140} \frac{\rho_D^3\left(D_{i}\right)}{m_c^3}\right. \nonumber\\
             &\qquad\qquad\qquad\qquad\qquad \left.+\frac{1}{7} \frac{\rho_{L S}^3\left(D_{i}\right)}{m_c^3} + ... \right],\nonumber\\
-            \left\langle E_e^4\right\rangle_{D_i}&=\frac{\hat{\Gamma}_0}{\Gamma_{D_{i}}}\sum_{q=d,s}\left|V_{cq}\right|^2 m_c^9\left[\frac{3}{224} + \frac{\alpha_{s}}{\pi} a_4^{(1)}  + {\alpha_s^2\over \pi^2}a_4^{(2)}  -\frac{3}{14} \rho\delta_{sq} +\frac{3}{64} \frac{\mu_\pi^2\left(D_{i}\right)}{ m_c^2}-\frac{13}{448} \frac{\mu_G^2\left(D_{i}\right)}{ m_c^2} +\frac{481}{560} \frac{\rho_D^3\left(D_i\right)}{m_c^3}\right. \nonumber\\
+            \left\langle E_e^4\right\rangle_{D_i}&=\frac{\hat{\Gamma}_0}{\Gamma_{D_{i}}}\sum_{q=d,s}\left|V_{cq}\right|^2 m_c^9\left[\frac{3}{224} + \frac{\alpha_{s}}{\pi} a_4^{(1)}  + \frac{\alpha_s^2}{\pi^2}a_4^{(2)}  -\frac{3}{14} \rho\delta_{sq} +\frac{3}{64} \frac{\mu_\pi^2\left(D_{i}\right)}{ m_c^2}-\frac{13}{448} \frac{\mu_G^2\left(D_{i}\right)}{ m_c^2} +\frac{481}{560} \frac{\rho_D^3\left(D_i\right)}{m_c^3}\right. \nonumber\\
             &\qquad\qquad\qquad\qquad\qquad \left.+\frac{9}{112} \frac{\rho_{L S}^3\left(D_i\right)}{m_c^3}+ ... \right],\nonumber
             \end{aligned}
             \label{eq:inital_moments}
       \end{equation}
+      }
       式\eqref{eq:inital_moments}的NLO和NNLO系数如下所示，
+      {\scriptsize
       \begin{equation}
-        \scriptsize
       \begin{aligned}
-        a^{(1)}_1 &= {1093 - 180\pi^2\over 900 }, \;
+        a^{(1)}_1 &= \frac{1093 - 180\pi^2}{900}, \;
         a^{(1)}_2 = \frac{4243 - 720 \pi^2}{{10800}}, \; 
         a^{(1)}_3 = \frac{144037-25200 \pi^2}{{1058400}}, \; 
         a^{(1)}_4 = \frac{69827-12600 \pi^2}{{1411200}},   \\
-        a^{(2)}_1 &= {\beta_0\over 4}a^{(1)}_1\ell -7.70077, \; 
-        a^{(2)}_2 = {\beta_0\over 4}a^{(1)}_2\ell -2.77835, \; 
-        a^{(2)}_3 = {\beta_0\over 4}a^{(1)}_3\ell -1.06371 , \; 
-        a^{(2)}_4 = {\beta_0\over 4}a^{(1)}_4\ell -0.42438 , \nonumber
+        a^{(2)}_1 &= \frac{\beta_0}{4}a^{(1)}_1\ell -7.70077, \; 
+        a^{(2)}_2 = \frac{\beta_0}{4}a^{(1)}_2\ell -2.77835, \; 
+        a^{(2)}_3 = \frac{\beta_0}{4}a^{(1)}_3\ell -1.06371 , \; 
+        a^{(2)}_4 = \frac{\beta_0}{4}a^{(1)}_4\ell -0.42438 , \nonumber
         \end{aligned}
     \end{equation}
+    }
         本文关于前两阶电子能量（原点）矩的结果与Kamenik等人的工作\cite{Kamenik:2011zz}一致，树图水平上量纲六算符的修正来源于Mannel等人的工作\cite{Fael:2019umf}，前四阶矩的领头阶与Mannel等人的结果\cite{Fael:2019umf}一致。
         事实上，本文同样提供了电子能量第二、三、四阶的中心矩，电子能量的中心矩由原点矩线性组合而成，定义如下：
+        {\scriptsize
         \begin{equation}
-            \scriptsize
         \begin{aligned}
             \left\langle E_e\right\rangle, \;\left\langle E_e^2\right\rangle_{\rm center}\equiv \left\langle (E_e - \langle E_e\rangle)^2 \right\rangle , \; \left\langle E_e^3\right\rangle_{\rm center}\equiv\left\langle (E_e - \langle E_e\rangle)^3 \right\rangle , \; \left\langle E_e^4\right\rangle_{\rm center}\equiv\left\langle (E_e - \langle E_e\rangle)^4 \right\rangle .
             \end{aligned}
         \end{equation}
+        }
     由于物理可观测量对粲夸克质量的高度敏感性，有关粲夸克质量方案的讨论是必要的，具体讨论将在第四章全局拟合的部分呈现。
 \section{更高量纲算符非微扰矩阵元的参数化}
 上一节通过对电子能谱的加权积分得到各类物理可观测量，其中量纲六算符非微扰矩阵元的贡献来自于Mannel等人的工作\ct{Fael:2019umf}。本节基于Lenz等人的工作\ct{King:2021jsq}对量纲六算符非微扰矩阵元的参数化进行简单介绍。

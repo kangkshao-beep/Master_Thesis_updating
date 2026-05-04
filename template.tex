@@ -1,8 +1,8 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 
-% \documentclass[AutoFakeBold]{LZUThesis}
-\documentclass[AutoFakeBold]{LZUThesis-PgD&PhD}
+% \documentclass{LZUThesis}
+\documentclass{LZUThesis-PgD&PhD}
 \usepackage{appendix}
 \usepackage{booktabs}
 \usepackage{float}
@@ -28,6 +28,11 @@
 \newcommand{\ct}[1]{\cite{#1}}
 \newcommand{\mrm}[1]{\mathrm{#1}}
 \newcommand{\GeV}{\mathrm{GeV}}
+\setCJKmainfont{Songti SC Light}[BoldFont={Songti SC Bold}]
+\setCJKsansfont{Heiti SC Light}[BoldFont={Heiti SC Medium}]
+\setCJKfamilyfont{zhsong}{Songti SC Light}[BoldFont={Songti SC Bold}]
+\setCJKfamilyfont{zhhei}{Heiti SC Light}[BoldFont={Heiti SC Medium}]
+\setCJKfamilyfont{zhfs}{Songti SC Light}[BoldFont={Songti SC Bold}]
 \lstset{
     basicstyle=\ttfamily\small,
     numbers=left,
@@ -281,6 +286,6 @@ This study selects the global fit estimates of the fundamental parameters in the
 \\
 \\
 \\
-\\   \textit{2025年5月15日}\\
-    \text{于华中科技大学}
+\\   2025年5月15日\\
+    于华中科技大学
 \end{document}

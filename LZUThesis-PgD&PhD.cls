@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{LZUThesis-PgD&PhD}[2023/05/19 V3.5.0.2023 Thesis for LZUer PgD&PhD By yuhldr Use 2023 standard]
-\LoadClass[12pt, a4paper, UTF8, openany,oneside]{ctexbook}
+\LoadClass[12pt, a4paper, UTF8, openany,oneside,fontset=fandol]{ctexbook}
 
 % 兰州大学研究生学位论文写作参考规范 https://ge.lzu.edu.cn/xueweishouyu/guizhangzhidu/lunwenguanli/2020/1223/158947.html
 
@@ -156,7 +156,6 @@
 \RequirePackage{amsmath}
 % \RequirePackage{amsfonts}
 % \RequirePackage{amssymb}
-\RequirePackage{mathrsfs}
 
 \RequirePackage{graphicx}
 \graphicspath{{figures/}{figure/}{pictures/}
@@ -223,8 +222,8 @@
     \tableofcontents
 
     % 图表目录标题
-    \CTEXoptions[listfigurename={图\quad 目\quad 录}]
-    \CTEXoptions[listtablename={表\quad 目\quad 录}]
+    \ctexset{listfigurename={图\quad 目\quad 录}}
+    \ctexset{listtablename={表\quad 目\quad 录}}
 
     % 插图目录
     \renewcommand{\numberline}[1]{\figlabel~##1\hspace*{1em}}
