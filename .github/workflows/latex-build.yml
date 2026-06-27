@@ -14,16 +14,13 @@ jobs:
   build-latex:
     name: XeLaTeX build
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@v4
       - name: Build thesis PDF
-        uses: xu-cheng/latex-action@v4
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: template-ci.tex
-          os: debian
           latexmk_use_xelatex: true
           extra_system_packages: "fonts-noto-cjk"
           pre_compile: |
@@ -35,9 +32,8 @@ jobs:
               template.tex > template-ci.tex
           post_compile: |
             latexmk -c template-ci.tex || true
-
       - name: Upload compiled PDF
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: thesis-pdf
           path: template-ci.pdf

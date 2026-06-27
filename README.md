@@ -129,9 +129,9 @@ AI-generated changes should always be reviewed by a human maintainer, especially
 
 Planned maintenance work includes
 
-* [ ] improve repository-level documentation;
-* [ ] add `CITATION.cff`;
-* [ ] add GitHub Actions for automated LaTeX build checks;
+* [x] improve repository-level documentation;
+* [x] add `CITATION.cff`;
+* [x] add GitHub Actions for automated LaTeX build checks;
 * [ ] create a first versioned release, e.g. `v0.1-thesis-source`;
 * [ ] clean generated auxiliary files from version control where appropriate;
 * [ ] add issue templates for build problems and reproducibility problems;
@@ -139,7 +139,7 @@ Planned maintenance work includes
 
 ## Citation
 
-If this repository is useful for your research, teaching, or reproducibility workflow, please cite the repository or the associated thesis. A formal `CITATION.cff` file is planned.
+If this repository is useful for your research, teaching, or reproducibility workflow, please cite the repository or the associated thesis. Citation metadata is provided in `CITATION.cff`.
 
 A provisional BibTeX entry is
 
@@ -160,4 +160,3 @@ This repository is released under the MIT License. See [`LICENSE`](LICENSE) for 
 ## Maintainer Notes
 
 This repository is currently maintained as a focused open-research artifact. Contributions, issue reports, and reproducibility suggestions are welcome, but all scientific changes should preserve the original thesis context unless explicitly marked as later updates.
-::: 
