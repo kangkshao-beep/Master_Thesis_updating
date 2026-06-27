@@ -9,3 +9,20 @@
 *.synctex*
 *.fdb_latexmk
 *.fls
+
+# macOS
+.DS_Store
+
+# LaTeX auxiliary files
+*.bcf
+*.run.xml
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# CI-generated temporary file
+template-ci.tex
+template-ci.pdf

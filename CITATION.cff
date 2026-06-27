@@ -1,0 +1,20 @@
+cff-version: "1.2.0"
+message: "If you use this thesis source archive or reproducibility repository, please cite it using the metadata below."
+title: "Inclusive Charm Semileptonic Decays: Thesis Source and Reproducibility Notes"
+type: dataset
+authors:
+  - family-names: "Shao"
+    given-names: "KangKang"
+repository-code: "https://github.com/kangkshao-beep/Master_Thesis_updating"
+url: "https://github.com/kangkshao-beep/Master_Thesis_updating"
+abstract: "LaTeX source, bibliography, figures, and maintenance notes for a master's thesis project on inclusive charm semileptonic decays, HQET/OPE phenomenology, and heavy-quark mass-scheme considerations."
+keywords:
+  - "inclusive charm decays"
+  - "semileptonic decays"
+  - "HQET"
+  - "OPE"
+  - "heavy-flavor physics"
+  - "LaTeX"
+license: "MIT"
+version: "v0.1-thesis-source"
+date-released: "2026-06-27"

@@ -1,0 +1,44 @@
+name: Build thesis PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-latex:
+    name: XeLaTeX build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Build thesis PDF
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: template-ci.tex
+          os: debian
+          latexmk_use_xelatex: true
+          extra_system_packages: "fonts-noto-cjk"
+          pre_compile: |
+            sed \
+              -e 's/Songti SC Light/Noto Serif CJK SC/g' \
+              -e 's/Songti SC Bold/Noto Serif CJK SC/g' \
+              -e 's/Heiti SC Light/Noto Sans CJK SC/g' \
+              -e 's/Heiti SC Medium/Noto Sans CJK SC/g' \
+              template.tex > template-ci.tex
+          post_compile: |
+            latexmk -c template-ci.tex || true
+
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v7
+        with:
+          name: thesis-pdf
+          path: template-ci.pdf
+          if-no-files-found: error
