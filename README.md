@@ -132,10 +132,10 @@ Planned maintenance work includes
 * [x] improve repository-level documentation;
 * [x] add `CITATION.cff`;
 * [x] add GitHub Actions for automated LaTeX build checks;
-* [ ] create a first versioned release, e.g. `v0.1-thesis-source`;
-* [ ] clean generated auxiliary files from version control where appropriate;
-* [ ] add issue templates for build problems and reproducibility problems;
-* [ ] organize future Mathematica/Python validation scripts if they become part of the public workflow.
+* [x] create a first versioned release, e.g. `v0.1-thesis-source`;
+* [x] clean generated auxiliary files from version control where appropriate;
+* [x] add issue templates for build problems and reproducibility problems;
+* [x] organize future Mathematica/Python validation scripts if they become part of the public workflow.
 
 ## Citation
 
