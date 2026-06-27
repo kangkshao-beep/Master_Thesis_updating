@@ -22,15 +22,14 @@ jobs:
         with:
           root_file: template-ci.tex
           latexmk_use_xelatex: true
-          extra_system_packages: "font-noto-cjk"
           pre_compile: |
             sed \
-              -e 's/Songti SC Light/Noto Serif CJK SC/g' \
-              -e 's/Songti SC Bold/Noto Serif CJK SC/g' \
-              -e 's/Heiti SC Light/Noto Sans CJK SC/g' \
-              -e 's/Heiti SC Medium/Noto Sans CJK SC/g' \
-              -e 's/KaiTi SC Bold/Noto Serif CJK SC/g' \
-              -e 's/KaiTi SC/Noto Serif CJK SC/g' \
+              -e 's/Songti SC Light/FandolSong-Regular.otf/g' \
+              -e 's/Songti SC Bold/FandolSong-Bold.otf/g' \
+              -e 's/Heiti SC Light/FandolHei-Regular.otf/g' \
+              -e 's/Heiti SC Medium/FandolHei-Bold.otf/g' \
+              -e 's/KaiTi SC Bold/FandolKai-Regular.otf/g' \
+              -e 's/KaiTi SC/FandolKai-Regular.otf/g' \
               template.tex > template-ci.tex
           post_compile: |
             latexmk -c template-ci.tex || true

@@ -21,7 +21,7 @@ This first public release archives the LaTeX source of my master's thesis projec
 
 ## Reproducibility notes
 
-The main LaTeX entry point is `template.tex`. The repository is designed to build with XeLaTeX and BibTeX. The GitHub Actions workflow uses a CI-specific temporary file, `template-ci.tex`, to replace macOS-specific Chinese font names with Linux-compatible Noto CJK fonts during automated builds.
+The main LaTeX entry point is `template.tex`. The repository is designed to build with XeLaTeX and BibTeX. The GitHub Actions workflow uses a CI-specific temporary file, `template-ci.tex`, to replace macOS-specific Chinese font names with TeX Live's bundled Fandol CJK fonts during automated builds.
 
 ## Future maintenance plans
 
