@@ -22,7 +22,7 @@ jobs:
         with:
           root_file: template-ci.tex
           latexmk_use_xelatex: true
-          extra_system_packages: "fonts-noto-cjk"
+          extra_system_packages: "font-noto-cjk"
           pre_compile: |
             sed \
               -e 's/Songti SC Light/Noto Serif CJK SC/g' \
