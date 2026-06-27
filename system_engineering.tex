@@ -1,6 +1,20 @@
 \chapter{工程系统化}
-\section{引言}
+\section{引言:关于AI的态度和看法}
+\begin{quotation}
+不要沉迷于“构建体系”的幻觉。真正决定你未来价值的，不是你现在能画出多宏大的 AI 蓝图，而是你能不能先把自己的 physics 做出来。理论物理不是靠 vision 支撑的，而是靠一篇篇文章、一条条推导、一个个 consistency check、一轮轮失败与修正堆出来的。没有真实科研积累，所谓的 AI-native ecosystem 最终只会沦为空洞口号。
+
+现在最重要的，不是去维护 community、组织 workflow、设计 infrastructure，而是先把你手上的 HQE、OPE、dim-5/NLO、高阶修正、symbolic computation、博士论文这些真正困难的问题解决掉。因为只有真实科研中的痛点，才能逼迫你形成真正有价值的方法论。那些“trivial but meaningful”的工作，其实一点都不 trivial——未来真正重要的 physics workflow、verification culture、research skill abstraction，很可能就埋在这些细节里。
+
+不要急着成为“组织者”或者“布道者”。你现在最该做的是成为一个真正强的 researcher。因为未来别人是否认真看待你提出的 AI+Physics framework，从来不取决于你讲得多激动人心，而取决于：你自己有没有做出扎实的 physics，能不能解决别人解决不了的问题，能不能在复杂推导和 consistency verification 里站得住脚。
+
+真正有生命力的 research infrastructure，从来不是会议室里规划出来的，而是某个人为了完成自己的科研，被真实问题反复折磨之后，一点一点长出来的。先把自己的科研做到足够深、足够硬，未来很多东西自然会从你的 workflow 里生长出来。否则，过早沉迷于“体系建设”，很容易在真正做出任何 physics 之前，就先耗尽自己的科研生命力。
+
+\hfill 2026年5月7日
+\end{quotation}
+
 \textbf{工程系统化能力}，是一种核心竞争力，在AI愈加强大的今天，谁能在这股浪潮中get到这种能力，谁能把 prompt 提升为 workflow，把 workflow 提升为 skill，把 skill 接进 agent 和工具链，再用 eval 固定成团队标准。谁就能在这个时代有更多时间去enjoy life 或者去创造，实现更多的想法，从这个角度看，工程系统化能力使得我们并未偏离当初做物理的初衷。
+
+
 \section{Daily arXiv: 基于AI的科研文献自动化系统}
 这个项目是一个面向物理研究者的 arXiv 每日文献助手：它会自动抓取你关心分类（目前默认 `hep-ph` 和 `hep-ex`）的最新论文，先整理当天全部新文章的题目、作者、原始摘要和主要结果，再结合你和合作者各自的 `.bib` 文献库与研究画像，挑出最相关的几篇做更深入的中文分析，包括物理图像、与你研究的关联、潜在合作思路等，最后把结果以支持 LaTeX 公式渲染的 HTML 邮件定时发送给你；它同时支持 GitHub Actions 和本地 macOS `launchd` 两种自动运行方式。
 \section{TheoryOS: AI 驱动的理论操作系统}

@@ -17,6 +17,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{slashed} 
+\usepackage{subcaption}
 \usepackage{braket}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing,decorations.markings,patterns,arrows.meta}
@@ -28,11 +29,16 @@
 \newcommand{\ct}[1]{\cite{#1}}
 \newcommand{\mrm}[1]{\mathrm{#1}}
 \newcommand{\GeV}{\mathrm{GeV}}
+\newcommand{\Lcp}{\Lambda_c^+}
+\newcommand{\LcptoXenu}{\Lambda_c^+ \to X e^+ \nu_e}
+\newcommand{\chindf}{\chi^2/\mathrm{n.d.f.}}
 \setCJKmainfont{Songti SC Light}[BoldFont={Songti SC Bold}]
 \setCJKsansfont{Heiti SC Light}[BoldFont={Heiti SC Medium}]
 \setCJKfamilyfont{zhsong}{Songti SC Light}[BoldFont={Songti SC Bold}]
 \setCJKfamilyfont{zhhei}{Heiti SC Light}[BoldFont={Heiti SC Medium}]
 \setCJKfamilyfont{zhfs}{Songti SC Light}[BoldFont={Songti SC Bold}]
+\setCJKfamilyfont{zhkai}{KaiTi SC}[BoldFont={KaiTi SC Bold}]
+\newcommand{\kaishuCJK}[1]{{\CJKfamily{zhkai}#1}}
 \lstset{
     basicstyle=\ttfamily\small,
     numbers=left,
@@ -214,10 +220,11 @@ This study selects the global fit estimates of the fundamental parameters in the
 \input{Standard_Model.tex}
 \input{Theoretical_Study_on_Semi-leptonic_Decay.tex}
 \input{Data_Analysis_Phenomenonology.tex}
+\input{CKMV_csd.tex}
+\input{Charm_Baryon_case.tex}
 \input{mass_scheme.tex}
 \input{system_engineering.tex}
 \input{Summary.tex}
-
 \begin{appendix}
     \input{appendix_A.tex}
     \input{appendix_B.tex}
@@ -283,9 +290,8 @@ This study selects the global fit estimates of the fundamental parameters in the
 期待博士期间能够进一步提升自己的科研能力，之后与大家一起，做更加有趣且激动人心的工作！
 
 \tb{最后，感谢肖叶蕾同学始终如一的包容与理解，让我在无数个熬夜的夜晚仍能保持乐观。}
-\\
-\\
-\\
-\\   2025年5月15日\\
+
+\vspace{4\baselineskip}
+2025年5月15日\\
     于华中科技大学
 \end{document}

@@ -24,11 +24,28 @@
 \contentsline {figure}{\numberline {4-11}{\ignorespaces 动力学质量方案下基于HQETSR对粲介子衰变宽度的理论预言}}{65}{figure.caption.56}%
 \contentsline {figure}{\numberline {4-12}{\ignorespaces 动力学质量方案下基于VIA对粲介子衰变宽度的理论预言}}{65}{figure.caption.56}%
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {5-1}{\ignorespaces 夸克自能修正图中的链式泡沫图}}{67}{figure.caption.57}%
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Pole mass 在 Borel \(u\)-平面上的 IR renormalon 解析结构示意图。黑点表示 branch points 的起点；从这些点向右延伸的线段表示相应的 branch cuts。}}{70}{figure.caption.58}%
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces 迭代贝叶斯推断方法的流程图：该过程从对 $\Lambda _c^+$ 静止系中电子动量概率密度函数（PDF）的一个任意假设出发，通过将所得模拟的实验室系 PDF 与实验数据进行比较，不断修正这一假设。这里，$f$ 表示电子动量的一维归一化 PDF，而 $\phi $ 表示三维动量矢量空间中的 PDF。$p$ 和 $\vec {p}$ 表示实验室系中的变量，而 $p^*$ 和 $\vec {p}\,^*$ 表示 $\Lambda _c^+$ 静止系中的变量。}}{72}{figure.caption.57}%
+\contentsline {figure}{\numberline {6-2}{\ignorespaces $\Lambda _c^+ \to X e^+ \nu _e$过程质心系电子能谱的重建结果}}{75}{figure.caption.58}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {模拟得到的实验室系 $p_e$ 概率密度函数（PDF）与测量结果的比较，其中 \(\chi ^2/\mathrm {n.d.f.}= 0.74\)。.}}}{75}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {以平坦分布作为初始假设时，通过贝叶斯推断得到的 \(\Lambda _c^+\) 静止系中 $p^*_e$ 的概率密度函数（PDF）。}}}{75}{subfigure.2.2}%
+\contentsline {figure}{\numberline {6-3}{\ignorespaces 最终unfolded结果与迁移矩阵}}{78}{figure.caption.62}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\Lambda _c^+ \to X e^+ \nu _e$过程质心系中的电子动量分布unfolded结果 }}}{78}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\Lambda _c^+$质心系与实验室系之间电子动量迁移矩阵}}}{78}{subfigure.3.2}%
+\contentsline {figure}{\numberline {6-4}{\ignorespaces 基于$\Lambda _c^+ \to X e^+ \nu _e$过程的HQE非微扰参数的拟合结果}}{81}{figure.caption.65}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\mu ^{2}(\Lambda _c^+)-\rho _D^3(\Lambda _c^+)$平面误差椭圆，其包含两方面的贡献，分别是包含来自实验数据的误差和重整化能标跑动引入的误差.}}}{81}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {重整化能标跑动情形下对应的拟合结果$\chi ^2$分布}}}{81}{subfigure.4.2}%
+\contentsline {figure}{\numberline {6-5}{\ignorespaces 基于500组toy experiment data的拟合结果分布。每个子图展示了对应参数的拟合结果分布，红色参考线表示固定能标处real数据拟合结果的中心值，蓝色误差带表示该中心值的1倍标准误差范围。大多数拟合结果均落在$1-2\sigma $范围内，表明固定能标处的拟合估计具有很好的稳定性。}}{83}{figure.caption.67}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {最小$\chi ^2$分布。}}}{83}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\mu _{\pi ^2}(\Lambda _c^+)$拟合结果分布}}}{83}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\rho _{D}^3(\Lambda _c^+)$拟合结果分布}}}{83}{subfigure.5.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {弱湮灭参数的拟合结果分布}}}{83}{subfigure.5.4}%
+\addvspace {10.0pt}
+\contentsline {figure}{\numberline {7-1}{\ignorespaces 夸克自能修正图中的链式泡沫图}}{86}{figure.caption.71}%
+\contentsline {figure}{\numberline {7-2}{\ignorespaces Pole mass 在 Borel \(u\)-平面上的 IR renormalon 解析结构示意图。黑点表示 branch points 的起点；从这些点向右延伸的线段表示相应的 branch cuts。}}{89}{figure.caption.72}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {B-1}{\ignorespaces BibTeX 参考文献编译流程示意图}}{84}{figure.caption.59}%
+\contentsline {figure}{\numberline {B-1}{\ignorespaces BibTeX 参考文献编译流程示意图}}{103}{figure.caption.73}%
 \addvspace {10.0pt}

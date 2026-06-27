@@ -1,0 +1,206 @@
+\chapter{关于CKM矩阵元$|\rm{V_{cs,cd}}|$的拟合估计}
+\label{ch:CKMV_fit}
+\section{}
+\section{}
+\section{}
+\section{预先性研究}\label{sec:prediction}
+\subsection{关于CKM矩阵元的未来拟合估计}
+\subsection{关于重夸克展开非微扰参数的重新拟合估计}
+第\ref{chapter: D_meson_case_fitting}章首次实现了从D介子半轻单举衰变过程中对重夸克展开的非微扰参数拟合估计，但依然存在较大的不确定性。基于最新的高精度数据以及囊括高阶修正的理论表达式进行更系统的唯象学分析是有必要的。陈心宇等\cite{Author:inprep_XYTao}基于更高精度的D介子衰变宽度与各阶能矩，复现本文从D介子半轻单举衰变过程中对重夸克展开工作的拟合估计。
+
+在新的拟合分析中，实验数据的物理观测量与原分析保持一致，
+但实验误差有所减小，同时实验中心值也可能发生小幅移动。
+对于给定的重整化能标 \(\mu\)，HQE 非微扰参数通过最小化
+\begin{equation}
+    \chi^2(\theta;\mu)
+    =
+    \bigl[y-\eta(\theta;\mu)\bigr]^T
+    V^{-1}
+    \bigl[y-\eta(\theta;\mu)\bigr]
+\end{equation}
+得到。其中，\(y\) 表示实验输入向量，\(V\) 表示实验协方差矩阵，
+\(\eta(\theta;\mu)\) 表示理论预言，\(\theta\) 表示待拟合的 HQE 参数集合，
+例如
+\begin{equation}
+    \theta =
+    \left\{
+    \mu_\pi^2,\,
+    \mu_G^2,\,
+    \rho_D^3,\,
+    \rho_{LS}^3
+    \right\}.
+\end{equation}
+对于每一个采样得到的能标 \(\mu\)，都可以得到一组最佳拟合参数
+\(\theta_{\rm best}(\mu)\)。因此，重整化能标跑动引入的不确定度可以定义为
+\begin{equation}
+    \sigma_\mu(\theta_a)
+    =
+    {\rm Std}_{\mu}
+    \left[
+    \theta_{a,{\rm best}}(\mu)
+    \right],
+\end{equation}
+其中标准差是在所有采样的 \(\mu\) 点上计算得到的。
+
+\tb{如果新的拟合中 \(\sigma_\mu\) 明显大于原分析中的结果，
+这并不能直接说明当前误差由理论表达式的高阶截断引起，需要排除数据结构变化引入的影响。}
+这一现象可能来自三类原因：
+\begin{equation}
+    y_{\rm old}\to y_{\rm new},
+    \qquad
+    V_{\rm old}\to V_{\rm new},
+    \qquad
+    \eta_{\rm trunc}(\theta;\mu)
+    \ \text{的理论截断误差}.
+\end{equation}
+也就是说，\(\sigma_\mu\) 的增大既可能来自实验中心值的移动，
+也可能来自协方差结构的变化，例如误差减小或相关性增强；
+还可能是因为当前固定阶理论表达式无法在新实验精度下同时描述所有拟合观测量。
+因此，需要对该现象进行系统检测。
+
+首先，应直接检查最佳拟合参数随重整化能标的变化：
+\begin{equation}
+    \theta_{a,{\rm best}}(\mu)
+    \quad \text{as a function of} \quad \mu .
+\end{equation}
+如果 \(\theta_{a,{\rm best}}(\mu)\) 随 \(\mu\) 光滑且单调变化，
+则说明该不确定度主要反映有限阶理论截断后的 residual scale dependence。
+如果出现非单调行为、跳变、多分支、多峰分布或者长尾，
+则需要优先检查拟合是否存在多个局域极小值、协方差矩阵是否病态（条件数较大）、
+扫描区间是否过宽，或者某些观测量是否对能标变化异常敏感。
+
+其次，为了区分中心值移动和协方差结构变化的影响，需要采用hybrid scan方法。具体地，分别考虑四组输入：
+\begin{equation}
+    (y_{\rm old},V_{\rm old}),
+    \qquad
+    (y_{\rm old},V_{\rm new}),
+    \qquad
+    (y_{\rm new},V_{\rm old}),
+    \qquad
+    (y_{\rm new},V_{\rm new}) .
+\end{equation}
+对每一组输入都进行完全相同的 \(\mu\)-sampling fit，
+然后比较得到的 \(\sigma_\mu\)、\(\chi^2_{\min}(\mu)\)
+以及 \(\theta_{\rm best}(\mu)\)。
+
+如果
+\begin{equation}
+    \sigma_\mu(y_{\rm old},V_{\rm new})
+    \gg
+    \sigma_\mu(y_{\rm old},V_{\rm old}),
+\end{equation}
+则说明 \(\sigma_\mu\) 的放大主要来自新的协方差结构，
+例如实验误差减小、不同观测量之间的相关性增强，
+或者有效独立约束方向发生改变。
+
+如果
+\begin{equation}
+    \sigma_\mu(y_{\rm new},V_{\rm old})
+    \gg
+    \sigma_\mu(y_{\rm old},V_{\rm old}),
+\end{equation}
+则说明 \(\sigma_\mu\) 的放大主要来自实验中心值的移动。
+这意味着新的实验中心值相对于当前理论表达式可能产生了新的偏离。
+
+如果只有
+\begin{equation}
+    \sigma_\mu(y_{\rm new},V_{\rm new})
+\end{equation}
+明显增大，而前两种 hybrid 情况下并不明显，
+则说明中心值移动和协方差收紧共同作用。
+这种情况可能暗示原来被较大实验误差掩盖的偏离
+在新实验精度下开始显现。
+
+第三，应计算各个观测量的 residual 或 pull。
+对于单个观测量，可以先定义普通 pull：
+\begin{equation}
+    r_i(\mu)
+    =
+    \frac{
+    y_i-\eta_i(\theta_{\rm best}(\mu);\mu)
+    }{
+    \sigma_i
+    } .
+\end{equation}
+不过，由于能谱矩之间通常存在较强相关性，直接使用普通 pull
+可能会误判不同观测量的真实贡献。因此，更稳妥的做法是使用
+whitened residual。若协方差矩阵满足 Cholesky 分解
+\begin{equation}
+    V = L L^T ,
+\end{equation}
+则定义
+\begin{equation}
+    \widetilde r(\mu)
+    =
+    L^{-1}
+    \bigl[
+    y-\eta(\theta_{\rm best}(\mu);\mu)
+    \bigr] .
+\end{equation}
+此时有
+\begin{equation}
+    \chi^2_{\min}(\mu)
+    =
+    \widetilde r(\mu)^T \widetilde r(\mu).
+\end{equation}
+
+如果某些 \(\widetilde r_i(\mu)\) 在整个 \(\mu\)-扫描区间内始终偏大，
+则说明 \(\sigma_\mu\) 的增大可能由特定观测量驱动。
+这时需要进一步判断这些观测量是否对当前 HQE 截断精度特别敏感，
+例如高阶能谱矩、带 cut 的 moments，或者 semileptonic width。
+如果 whitened residual 整体较小，而 \(\sigma_\mu\) 仍然明显增大，
+则更可能说明问题主要来自协方差几何结构和参数相关性的放大效应，
+而不是理论表达式与数据之间的直接冲突。
+
+最后，可以通过 Fisher matrix 检查参数空间的约束结构。
+在最佳拟合点附近，定义
+\begin{equation}
+    J_{ia}
+    =
+    \frac{\partial \eta_i}{\partial \theta_a},
+    \qquad
+    F
+    =
+    J^T V^{-1}J .
+\end{equation}
+矩阵 \(F\) 的本征值反映不同参数组合被实验观测量约束的强弱。
+其条件数定义为
+\begin{equation}
+    \kappa(F)
+    =
+    \frac{\lambda_{\max}(F)}{\lambda_{\min}(F)} .
+\end{equation}
+如果新数据下 \(\kappa(F)\) 明显变大，或者某些本征值显著变小，
+则说明参数空间中存在弱约束方向。此时即使理论预言本身的
+\(\mu\)-dependence 不大，经过拟合映射到 HQE 参数后，
+也可能被这些弱约束方向显著放大。
+
+\textcolor{blue}{为了进一步理解这种放大机制，可以定义理论计算结果关于非微扰参数和重整化能标的依赖\footnote{其中$\eta$是理论关于半轻单举衰变宽度、各阶能矩的计算结果，$\theta$是HQE非微扰参数集合，$\mu$是重整化能标。}
+\begin{equation}
+    s_i
+    =
+    \frac{\partial \eta_i}{\partial \ln\mu}.
+\end{equation}
+在线性近似下，能标变化诱导的参数漂移为
+\begin{equation}
+    \delta\theta_\mu
+    \simeq
+    F^{-1}J^T V^{-1}s\,\delta\ln\mu .
+\end{equation}
+如果 \(\delta\theta_\mu\) 主要投影到 \(F\) 的小本征值方向，
+则 \(\sigma_\mu\) 的增大可以理解为参数相关性和弱约束方向导致的放大，
+而不一定直接意味着当前误差由理论表达式的高阶截断引起。}
+
+综上，新的 \(\sigma_\mu\) 明显增大时，应依次检查：
+\begin{itemize}
+    \item \(\theta_{\rm best}(\mu)\) 是否光滑、单值、无跳变；
+    \item hybrid scans，即
+    \((y_{\rm old},V_{\rm new})\) 和
+    \((y_{\rm new},V_{\rm old})\)，以区分协方差结构和中心值移动的影响；
+    \item ordinary pulls 或 whitened residuals，以确定是否存在特定观测量驱动的 tension；
+    \item Fisher matrix 的本征值、本征向量和条件数，
+    以判断能标跑动是否被弱约束参数方向放大。
+\end{itemize}
+只有当 hybrid scan方法 显示实验中心值移动是主要原因，并且 pull 或 whitened residual 表明某些观测量存在持续偏离时，
+才应倾向于将增大的 \(\sigma_\mu\) 解释为当前截断 HQE 理论精度不足的迹号。
+否则，它更可能是新协方差结构、参数相关性和能标跑动共同作用的结果。
