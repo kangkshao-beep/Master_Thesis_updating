@@ -29,6 +29,8 @@ jobs:
               -e 's/Songti SC Bold/Noto Serif CJK SC/g' \
               -e 's/Heiti SC Light/Noto Sans CJK SC/g' \
               -e 's/Heiti SC Medium/Noto Sans CJK SC/g' \
+              -e 's/KaiTi SC Bold/Noto Serif CJK SC/g' \
+              -e 's/KaiTi SC/Noto Serif CJK SC/g' \
               template.tex > template-ci.tex
           post_compile: |
             latexmk -c template-ci.tex || true
