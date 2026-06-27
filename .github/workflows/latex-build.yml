@@ -22,6 +22,7 @@ jobs:
         with:
           root_file: template-ci.tex
           latexmk_use_xelatex: true
+          args: "-pdf -file-line-error -interaction=nonstopmode -f"
           pre_compile: |
             sed \
               -e 's/Songti SC Light/FandolSong-Regular.otf/g' \
